@@ -440,6 +440,59 @@
         object-fit: contain;
       }
 
+      .hero {
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-77xl) 0rem;
+  box-sizing: border-box;
+  gap: var(--gap-29xl);
+  min-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-25xl);
+  color: var(--heading);
+  font-family: var(--font-bricolage-grotesque);
+}
+.collective-resources {
+        font-size: var(--font-size-16xl);
+        line-height: 2.188rem;
+      }
+
+      @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.logoSliderParent {
+  white-space: nowrap;
+}
+
+.logoSlider {
+  display: inline-block;
+  overflow: hidden;
+  animation: 15s slide infinite linear;
+}
+
+.logoSlider img {
+  object-fit: contain;
+  width: 10%;
+  height: auto;
+}
+
+.video-circle {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+}
+
       @keyframes fade {
         from {
           opacity: 0.4;
@@ -507,6 +560,21 @@
           width: 100%;
           padding: 2%;
         }
+        .hero {
+            width: 100%;
+    gap: var(--gap-5xl);
+    padding-top: var(--padding-13xl);
+    padding-bottom: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+
+  .collective-resources {
+        font-size: var(--font-size-16xl);
+        line-height: 2.188rem;
+      }
+      .video-circle {
+        width: 50px;
+      }
       }
       @media screen and (max-width: 497px) {
         .section-1 {
@@ -536,6 +604,13 @@
         .language {
           width: 28%;
         }
+        .collective-resources {
+        font-size: var(--font-size-7xl);
+        line-height: 1.625rem;
+      }
+      .video-circle {
+        width: 30px;
+      }
       }
 
       @media screen and (max-width: 1346px) {
@@ -1077,6 +1152,192 @@
             </div>
           </div>
       </section>
+      
+
+      <section class="hero">
+        <div style="align-self: center;">
+          <h2 class="collective-resources">Collective Resources</h2>
+        </div>
+        <div>
+          <div
+            style="min-width: 100%; overflow-x: hidden;"
+            class="logoSliderParent"
+          >
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                "
+              >
+                <img
+                  src="./public/image-509@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto;"
+                />
+                <img
+                  src="./public/image-511@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-507@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-508@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-522@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-523@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding-left: 5%;
+                "
+              >
+                <img
+                  src="./public/image-509@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-511@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-507@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-508@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-522@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-523@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            style="min-width: 100%; overflow-x: hidden"
+            class="logoSliderParent"
+          >
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                "
+              >
+                <img
+                  src="./public/image-512@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-514@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-513@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-515@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-516@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-524@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding-left: 5%;
+                "
+              >
+                <img
+                  src="./public/image-512@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-514@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-513@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-515@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-516@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-524@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <section style="width: 90%; margin: 0 auto; text-align: center; padding: 20px 0; position: relative;">
+            <img src="./public/home/video-img.svg" alt="Video Image" style="max-width: 100%; height: auto;">
+            <img class="video-circle" src="./public/video-circle.svg" alt="Video Circle">
+        </section>
+      
 
       <section class="graph-sec">
         <div
