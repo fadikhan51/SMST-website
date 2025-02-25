@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./product.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap"
+    />
+    <script src="./javascript/artistic.js" defer></script>
+    <style>
+      .carousel-container {
+        display: none;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .carousel-container2 {
+        display: none;
+        width: 40%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .carousel {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel2 {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .slide2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .slide2.active {
+        opacity: 1;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .slide2 img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        width: 130%;
+        left: -15%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .carousel-nav2 {
+        position: absolute;
+        top: 50%;
+        width: 130%;
+        left: -15%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-button{
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .nav-button2 {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .nav-button:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .nav-button2:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .resize-img {
+        object-fit: contain;
+      }
+
+      .section-1 {
+        background-image: url("./public/home/blur-background.png");
+        background-size: cover;
+        background-position: center;
+        background-position-y: -300px;
+        width: 100%;
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 13%;
+      }
+      .headingText {
+        font-size: var(--font-size-35xl);
+        color: var(--heading);
+        margin: 0;
+      }
+      .language {
+        object-fit: contain;
+        padding: 0 10px;
+      }
+      .subtitle {
+        line-height: "156%";
+        font-size: var(--font-size-lg);
+        color: var(--paragraph);
+        text-align: center;
+        margin-top: 3%;
+      }
+      .enrollbtn {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--br-11xl);
+        gap: 2%;
+        background-color: var(--color-crimson);
+        padding: var(--padding-mid) var(--padding-13xl);
+        width: 150px;
+        margin-top: 5%;
+        justify-self: center;
+      }
+      .enrollText {
+        font-size: var(--font-size-lg);
+        font-family: var(--font-be-vietnam-pro);
+        font-weight: 500;
+        color: var(--color-white);
+        padding-left: var(--gap-xs);
+      }
+      #pic1 {
+        object-fit: contain;
+        padding-top: var(--padding-101xl);
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-self: center;
+        align-self: center;
+      }
+      .section-2 {
+        width: 100%;
+        overflow-x: hidden;
+        margin-top: 8%;
+        margin-bottom: 5%;
+        /* padding-left: 2%;
+        padding-right: 2%; */
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .sec2Inner {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-xl);
+      }
+      .section-3 {
+        background-image: url("./public/home/sec2-bg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: center; */
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 13%;
+      }
+      .card {
+        backdrop-filter: blur(10px);
+        object-fit: contain;
+        border-radius: 25px;
+        margin: var(--padding-xs);
+      }
+      .card-1-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-xl);
+        justify-content: flex-end;
+        padding-right: 4%;
+      }
+      .card-3-4 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-xl);
+        padding-left: 4%;
+      }
+
+      .sec3header {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+      }
+
+      .unleash-sec {
+        overflow-x: clip;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        margin-left: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        justify-content: space-between;
+      }
+
+      .img-sec {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        justify-content: flex-end;
+      }
+      .unleash {
+        width: 20%;
+      }
+      #side-img1 {
+        width: 25%;
+        object-fit: contain;
+      }
+      #side-img2 {
+        width: 25%;
+        object-fit: contain;
+      }
+      #side-img3 {
+        width: 25%;
+        object-fit: contain;
+      }
+
+      .graph-sec {
+        background-image: url("./public/home/graph-bg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: -300px;
+        background-color: #2d3747;
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        /* padding-top: 13%; */
+      }
+
+      .music-cards {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+        padding: 5%;
+      }
+
+      .music-card1 {
+        width: 50%;
+      }
+
+      .graph-text {
+        font-size: 32px;
+        color: #f5f5f5;
+        font-family: var(--font-be-vietnam-pro);
+        width: 60%;
+        align-self: flex-start;
+      }
+
+      .graph-img {
+        width: 60%;
+        object-fit: contain;
+      }
+
+      .mixer {
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-direction: column;
+      }
+
+      .margin-left {
+        margin-left: 5% ;
+      }
+
+      .checklist {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+      }
+
+      .checks {
+        display: flex;
+        flex-direction: column;
+      }
+      .checkline {
+        display: flex;
+        flex-direction: row;
+        margin-top: 6%;
+        gap: var(--gap-xs);
+      }
+      .enrollbtn {
+        background-color: var(--color-gold-100);
+        padding: var(--padding-mid) var(--padding-13xl);
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .mixer-img2 {
+        width: 40%;
+        margin-left: 10%;
+      }
+
+      #img2 {
+        object-fit: contain;
+      }
+
+      .skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        position: relative;
+      }
+
+      .midHeading {
+        width:50%;
+        text-align: center;
+        font-size: var(--font-size-25xl);
+        font-weight: 600;
+        line-height: 100%;
+        padding-top: 2%;
+        padding-bottom: 4%;
+        align-self: center;
+        /* max-width: 90%; */
+        color:#0e0606
+      }
+
+      .first-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        /* padding-right: 5%; */
+        justify-self: flex-end;
+        padding-bottom: 2%;
+        margin-right: 5%;
+        gap:2%;
+      }
+
+      .second-area {
+        /* position: relative;
+        left:7%; */
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        /* padding-right: 5%; */
+        justify-self: flex-end;
+        padding-bottom: 2%;
+        margin-right: 5%;
+        gap:2%;
+      }
+
+      .area {
+        width: 25%;
+        object-fit: contain;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .section-1 {
+          padding-top: 25%;
+        }
+        .sec2Inner {
+          justify-content: inherit;
+        }
+        .headingText {
+          font-size: var(--font-size-16xl);
+        }
+        .language {
+          width: 35%;
+        }
+        .subtitle {
+          font-size: var(--font-size-base);
+          margin-top: 2%;
+        }
+        .enrollbtn {
+          width: 120px;
+        }
+        .enrollText {
+          font-size: var(--font-size-sm);
+        }
+        #pic1 {
+          padding-top: var(--padding-77xl);
+        }
+        .carousel-container {
+          display: inherit;
+          margin-top: 10%;
+        }
+        .carousel-container2 {
+          display: inherit;
+        }
+        .carousel2 {
+            height: 150px;
+        }
+        .carousel-nav {
+          width: 140%;
+          left: -20%;
+        }
+        .carousel-nav2{
+            width: 180%;
+            left: -40%;
+        }
+        .first-area {
+            display: none;
+
+        }
+        .second-area {
+            display: none;
+        }
+        .music-cards {
+          flex-wrap: wrap;
+        }
+        .music-card1 {
+          width: 100%;
+          padding: 2%;
+        }
+      }
+      @media screen and (max-width: 497px) {
+        .section-1 {
+          padding-top: 30%;
+        }
+        .headingText {
+          font-size: var(--font-size-7xl);
+        }
+        .language {
+          width: 30%;
+        }
+        .subtitle {
+          font-size: var(--font-size-sm);
+        }
+        .enrollbtn {
+          width: 110px;
+          padding: var(--padding-xs) var(--padding-xl);
+        }
+        .enrollText {
+          font-size: "0.4rem";
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .headingText {
+          font-size: var(--font-size-lgi);
+        }
+        .language {
+          width: 28%;
+        }
+      }
+
+      @media screen and (max-width: 1346px) {
+        #pic3 {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1017px) {
+        #pic2 {
+          display: none;
+        }
+        .card-1-2 {
+          display: none;
+        }
+        .card-3-4 {
+          display: none;
+        }
+        .card {
+          display: none;
+        }
+        .carousel-container {
+          display: inherit;
+          margin-top: 20%;
+        }
+        .graph-text {
+          font-size: 20px;
+        }
+        #img1 {
+            width: 25%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .graph-text {
+          font-size: 16px;
+        }
+        .midHeading {
+            font-size: var(--font-size-16xl);
+        }
+      }
+      @media screen and (max-width: 1415px) {
+        .card {
+          width: 25%;
+        }
+      }
+      @media screen and (max-width: 1180px) {
+        .card {
+          width: 20%;
+        }
+        #img2 {
+            width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 533px) {
+        #img2 {
+
+            width: 70vw;
+            margin-top: 2rem;        }
+        .checklist {
+            flex-wrap: wrap;
+        }
+        .redTxt {
+            font-size: var(--font-size-sm);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-page">
+      <header class="image-520-parent" id="header">
+        <img
+          class="image-520-icon"
+          loading="lazy"
+          alt=""
+          src="./public/image-520@2x.png"
+        />
+
+        <div class="program-list">
+          <div class="courses-wrapper">
+            <a
+              href="index.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Courses</div></a
+            >
+          </div>
+          <div class="courses-wrapper">
+            <a
+              href="product.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Product</div></a
+            >
+          </div>
+          <div class="courses-wrapper">
+            <div class="home">Service</div>
+          </div>
+          <div class="courses-wrapper">
+            <a
+              href="artisticDevelopmentProgram.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Artistic Development Program</div></a
+            >
+          </div>
+        </div>
+
+        <div class="hamburger" style="color: #0e0606; font-size: 25px">
+          &#9776;
+        </div>
+      </header>
+
+      <section class="section-1">
+        <div>
+          <div
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <h1 class="headingText">Learn the</h1>
+            <img src="./public/home/language.svg" class="language" />
+            <h1 class="headingText">of Music</h1>
+          </div>
+          <h1 class="headingText" style="text-align: center">
+            Art with Action Based Courses
+          </h1>
+
+          <div class="subtitle">
+            Transform Your Talent Into a Career with Our Artist Development
+            Program from International Mentors
+          </div>
+
+          <div class="enrollbtn">
+            <img
+              loading="lazy"
+              class="white-logo"
+              src="./public/white-candle.png"
+            />
+            <span class="enrollText">Enroll Now</span>
+          </div>
+          <img
+            id="pic1"
+            alt="people talking with each other"
+            loading="lazy"
+            src="./public/home/picture1.svg"
+          />
+        </div>
+
+        <img
+          src="./public/home/section1-lines.svg"
+          style="
+            width: 100%;
+            object-fit: contain;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          "
+        />
+      </section>
+
+      <section class="section-2">
+        <div class="sec2Inner" style="overflow: hidden; width: 90vw">
+          <div id="pic2" style="position: relative; top: 7rem">
+            <img
+              alt="picture talking"
+              loading="lazy"
+              src="./public/home/pic2.png"
+            />
+          </div>
+
+          <div
+            class="midContent"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+            "
+          >
+            <h1 class="headingText">Collab with Famous</h1>
+            <h1 class="headingText">Producers</h1>
+
+            <div
+              class="subtitle"
+              style="width: 60%; text-align: start; margin-bottom: 7%"
+            >
+              Transform Your Talent Into a Career with Our Artist Development
+              Program
+            </div>
+
+            <img
+              style="width: 90%"
+              alt="picture talking"
+              loading="lazy"
+              src="./public/home/pic3.png"
+            />
+          </div>
+          <div id="pic3" style="position: relative; top: 15rem; right: 4rem">
+            <img
+              alt="picture talking"
+              loading="lazy"
+              src="./public/home/pic4.png"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-3">
+        <div class="sec3header">
+          <h1 class="headingText" style="color: var(--color-white)">
+            Deep Dive
+          </h1>
+          <h1 class="headingText" style="color: var(--color-white)">
+            into Music Production
+          </h1>
+          <div
+            class="subtitle"
+            style="
+              width: 50%;
+              text-align: left;
+              color: rgba(255, 255, 255, 0.72);
+            "
+          >
+            Find your unique sound, build your fanbase, and turn your passion
+            into a reality. Join us - it's your time to shine!
+          </div>
+        </div>
+        <div class="card-1-2">
+          <img
+            class="card"
+            alt="card3"
+            loading="lazy"
+            src="./public/home/card1.svg"
+          />
+          <img
+            class="card"
+            alt="card4"
+            loading="lazy"
+            src="./public/home/card2.svg"
+          />
+        </div>
+        <div class="card-3-4">
+          <img
+            class="card"
+            alt="card3"
+            loading="lazy"
+            src="./public/home/card3.svg"
+          />
+          <img
+            class="card"
+            alt="card4"
+            loading="lazy"
+            src="./public/home/card4.svg"
+          />
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="slide active">
+              <img
+                src="./public/home/card1.svg"
+                class="resize-img"
+                alt="Image 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./public/home/card2.svg"
+                class="resize-img"
+                alt="Image 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./public/home/card3.svg"
+                class="resize-img"
+                alt="Image 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="./public/home/card4.svg"
+                class="resize-img"
+                alt="Image 4"
+              />
+            </div>
+          </div>
+
+          <div class="carousel-nav">
+            <button class="nav-button prev">&#10094;</button>
+            <button class="nav-button next">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="unleash-sec">
+          <div class="unleash">
+            <h1 class="headingText" style="color: var(--color-white)">
+              Unleash Your Musical Talent
+            </h1>
+          </div>
+
+          <div class="img-sec">
+            <img
+              id="side-img1"
+              src="./public/home/side-img1.png"
+              alt="man"
+              style="position: relative; top: -20%"
+            />
+            <img id="side-img2" src="./public/home/side-img2.png" alt="man" />
+            <img
+              id="side-img3"
+              src="./public/home/side-img3.png"
+              alt="man"
+              style="position: relative; top: -30%"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="mixer">
+        <div class="margin-left">
+            <div
+          class="subtitle redTxt"
+          style="
+            margin-bottom: 1%;
+            color: #ff444e;
+            width: 40%;
+            text-align: left;
+          "
+        >
+          Personalized guidance with (enhanced practices/more effective
+          practices) to master Ableton Live.
+        </div>
+        <div class="headingText" style="font-weight: 700">
+          Music Mixer Course
+        </div>
+
+        <div class="checklist">
+          <div class="checks">
+            <div class="checkline">
+              <img
+                style="width: 24px; height: 24px"
+                alt="tick"
+                src="./public/home/tick-circle.svg"
+              />
+              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
+                Learn Basic
+              </div>
+            </div>
+            <div class="checkline">
+              <img
+                style="width: 24px; height: 24px"
+                alt="tick"
+                src="./public/home/tick-circle.svg"
+              />
+              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
+                Start to Produce Music Your Own
+              </div>
+            </div>
+            <div class="checkline">
+              <img
+                style="width: 24px; height: 24px"
+                alt="tick"
+                src="./public/home/tick-circle.svg"
+              />
+              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
+                Learn from International Mentors
+              </div>
+            </div>
+            <div class="checkline">
+              <img
+                style="width: 24px; height: 24px"
+                alt="tick"
+                src="./public/home/tick-circle.svg"
+              />
+              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
+                Produced 4-5 mix ups
+              </div>
+            </div>
+            <div class="checkline">
+              <img
+                style="width: 24px; height: 24px"
+                alt="tick"
+                src="./public/home/tick-circle.svg"
+              />
+              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
+                Recognized certificate
+              </div>
+            </div>
+            <div class="checkline enrollbtn" style="margin-top: 20%">
+              <img
+                style="object-fit: contain"
+                alt="logo"
+                src="./public/small-candles.png"
+                loading="lazy"
+              />
+              <div
+                class="subtitle redTxt"
+                style="
+                  font-family: var(--font-be-vietnam-pro);
+                  font-weight: 500;
+                  color: #0e0606;
+                "
+              >
+                Enroll now
+              </div>
+            </div>
+          </div>
+
+          <div class="mixer-img2">
+            <img
+              src="./public/home/mixer-img2.png"
+              alt="image2"
+              loading="lazy"
+              id="img2"
+            />
+          </div>
+        </div>
+        </div>
+        <img
+          src="./public/home/section1-lines.svg"
+          style="
+            width: 100%;
+            object-fit: contain;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          "
+        />
+
+        <img
+          src="./public/home/mixer-img1.png"
+          id="img1"
+          style="
+            object-fit: contain;
+            position: absolute;
+            top:10%;
+            right: 10%;          "
+        />
+
+      </section>
+
+      <section class="skills">
+        <div class="midHeading">
+            Gain Skills to Work in the Following Areas
+        </div>
+
+        <div class="first-area">
+            <img
+            src="./public/home/area1.svg"
+            alt="area1"
+            loading="lazy"
+            class="area"
+            />
+            <img
+            src="./public/home/area2.svg"
+            alt="area1"
+            loading="lazy"
+            class="area"
+            />
+            <img
+            src="./public/home/area3.svg"
+            alt="area1"
+            loading="lazy"
+            class="area"
+            />
+        </div>
+        <div class="second-area">
+            <img
+            src="./public/home/area4.svg"
+            alt="area1"
+            loading="lazy"
+            style="width: 22%;"
+            />
+            <img
+            src="./public/home/area5.svg"
+            alt="area1"
+            loading="lazy"
+            style="width: 22%;"
+            />
+            <img
+            src="./public/home/area6.svg"
+            alt="area1"
+            loading="lazy"
+            style="width: 22%;"
+                />
+        </div>
+
+
+        <div class="carousel-container2">
+            <div class="carousel2">
+              <div class="slide2 active">
+                <img
+                  src="./public/home/area1.svg"
+                  class="resize-img"
+                  alt="Image 1"
+                />
+              </div>
+              <div class="slide2">
+                <img
+                  src="./public/home/area2.svg"
+                  class="resize-img"
+                  alt="Image 2"
+                />
+              </div>
+              <div class="slide2">
+                <img
+                  src="./public/home/area3.svg"
+                  class="resize-img"
+                  alt="Image 3"
+                />
+              </div>
+              <div class="slide2">
+                <img
+                  src="./public/home/area4.svg"
+                  class="resize-img"
+                  alt="Image 4"
+                />
+              </div>
+
+              <div class="slide2">
+                <img
+                  src="./public/home/area5.svg"
+                  class="resize-img"
+                  alt="Image 4"
+                />
+              </div>
+              <div class="slide2">
+                <img
+                  src="./public/home/area6.svg"
+                  class="resize-img"
+                  alt="Image 4"
+                />
+              </div>
+            </div>
+  
+            <div class="carousel-nav2">
+              <button class="nav-button2 prev2">&#10094;</button>
+              <button class="nav-button2 next2">&#10095;</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="graph-sec">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 5%;
+          "
+        >
+          <h1 class="headingText" style="color: var(--color-white)">
+            Our Approach to Teaching
+          </h1>
+          <h1 class="headingText" style="color: var(--color-white)">
+            Music Production
+          </h1>
+        </div>
+
+        <div class="music-cards">
+          <img
+            src="./public/home/music-card1.svg"
+            alt="graph1"
+            class="music-card1"
+          />
+          <img
+            src="./public/home/music-card 2.svg"
+            alt="graph2"
+            class="music-card1"
+          />
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin: 5%;
+            align-items: center;
+          "
+        >
+          <div class="graph-text">
+            Unleash your inner artist with our Artist Development Program. Craft
+            killer beats, refine your stage presence, and master the business
+            side, all under the guidance of seasoned industry professionals.
+          </div>
+
+          <img class="graph-img" alt="graph" src="./public/home/graph.svg" />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="frame-parent36" style="padding-left: 5%; padding-right: 5%">
+          <div class="join-our-newsletter-parent">
+            <div class="join-our-newsletter">Join our Newsletter</div>
+            <div class="placeholder">
+              <div class="want-to-create">Email Address</div>
+              <div class="placeholder1">
+                <div class="vuesaxlineararrow-down-icon">
+                  <div class="message-light-child"></div>
+                  <img
+                    class="message-light-item"
+                    alt=""
+                    src="./public/vector-3.svg"
+                  />
+                </div>
+                <input
+                  class="someoneexamplecom"
+                  placeholder="someone@example.com"
+                  type="text"
+                />
+              </div>
+            </div>
+            <button class="button">
+              <div class="subscribe-newsletter">Subscribe Newsletter</div>
+            </button>
+          </div>
+          <div class="frame-parent37">
+            <div class="frame-parent38">
+              <div class="links-wrapper">
+                <div class="links">LINKS</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">Courses</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Products</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Services</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">
+                    <p class="join-now-and">Artists Development</p>
+                    <p class="join-now-and">Program</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent38">
+              <div class="links-wrapper">
+                <div class="links">ABOUT</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">About Us</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Contact</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Privacy Policy</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Terms & Conditions</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent42">
+              <div class="company-wrapper">
+                <div class="company">COMPANY</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">9810745330</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">contact@smst.com</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">New Delhi, India</div>
+                </div>
+                <div class="social">
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/facebook.svg"
+                  />
+
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/twitter.svg"
+                  />
+
+                  <img
+                    class="youtube-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/youtube@2x.png"
+                  />
+
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/instagram.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            padding-top: 5%;
+            width: 95%;
+            padding-left: 5%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            gap: 2%;
+          "
+        >
+          <img
+            style="width: 60%; max-width: 100%; height: auto"
+            loading="lazy"
+            alt=""
+            src="./public/delhi.png"
+          />
+          <img
+            style="width: 20%; height: auto"
+            loading="lazy"
+            alt=""
+            src="./public/footer-logo.png"
+          />
+        </div>
+
+        <div class="copyright">
+          <div class="copyrightText">Copyright © 2024 | Crafted by Locgfx</div>
+        </div>
+      </footer>
+    </div>
+    <script src="./javascript/carousel.js" defer></script>
+  </body>
+</html>
