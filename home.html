@@ -111,7 +111,7 @@
         justify-content: space-between;
       }
 
-      .nav-button{
+      .nav-button {
         background: rgba(0, 0, 0, 0.5);
         color: white;
         padding: 1rem;
@@ -354,7 +354,7 @@
       }
 
       .margin-left {
-        margin-left: 5% ;
+        margin-left: 5%;
       }
 
       .checklist {
@@ -399,7 +399,7 @@
       }
 
       .midHeading {
-        width:50%;
+        width: 50%;
         text-align: center;
         font-size: var(--font-size-25xl);
         font-weight: 600;
@@ -408,7 +408,7 @@
         padding-bottom: 4%;
         align-self: center;
         /* max-width: 90%; */
-        color:#0e0606
+        color: #0e0606;
       }
 
       .first-area {
@@ -419,7 +419,7 @@
         justify-self: flex-end;
         padding-bottom: 2%;
         margin-right: 5%;
-        gap:2%;
+        gap: 2%;
       }
 
       .second-area {
@@ -432,7 +432,7 @@
         justify-self: flex-end;
         padding-bottom: 2%;
         margin-right: 5%;
-        gap:2%;
+        gap: 2%;
       }
 
       .area {
@@ -441,56 +441,183 @@
       }
 
       .hero {
-  background-color: var(--color-white);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-77xl) 0rem;
-  box-sizing: border-box;
-  gap: var(--gap-29xl);
-  min-width: 100%;
-  text-align: center;
-  font-size: var(--font-size-25xl);
-  color: var(--heading);
-  font-family: var(--font-bricolage-grotesque);
-}
-.collective-resources {
+        background-color: var(--color-white);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-77xl) 0rem;
+        box-sizing: border-box;
+        gap: var(--gap-29xl);
+        min-width: 100%;
+        text-align: center;
+        font-size: var(--font-size-25xl);
+        color: var(--heading);
+        font-family: var(--font-bricolage-grotesque);
+      }
+      .collective-resources {
         font-size: var(--font-size-16xl);
         line-height: 2.188rem;
       }
 
       @keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.logoSliderParent {
-  white-space: nowrap;
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      .logoSliderParent {
+        white-space: nowrap;
+      }
+
+      .logoSlider {
+        display: inline-block;
+        overflow: hidden;
+        animation: 15s slide infinite linear;
+      }
+
+      .logoSlider img {
+        object-fit: contain;
+        width: 10%;
+        height: auto;
+      }
+
+      .video-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+
+      .quote-text {
+        color: #0e0606;
+        font-style: italic;
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 18px;
+      }
+
+      .quote-name {
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+        color: var(--paragraph);
+      }
+
+      .legendary-quotes {
+        font-weight: 600;
+        font-family: var(--font-bricolage-grotesque); 
+        font-size: 68px; 
+        color: var(--color-crimson);
+        position: absolute;
+        bottom:5%; left:5%
+      }
+
+      .desktop-quote-section {
+  position: relative;
+  margin: 5%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
 }
 
-.logoSlider {
-  display: inline-block;
-  overflow: hidden;
-  animation: 15s slide infinite linear;
+/* First quote column */
+.desktop-quote-col-small {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
 }
 
-.logoSlider img {
+/* Third quote column (larger width) */
+.desktop-quote-col-large {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  margin-top: 20%;
+}
+
+/* First quote container with spacing */
+.desktop-quote-container-first {
+  padding-bottom: 35%;
+}
+
+/* Third quote container with spacing */
+.desktop-quote-container-third {
+  padding-bottom: 25%;
+}
+
+/* Quote image styles */
+.desktop-quote-image {
+  width: 100%;
   object-fit: contain;
-  width: 10%;
-  height: auto;
 }
 
-.video-circle {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    cursor: pointer;
+/* Second quote image specific style */
+.desktop-quote-image-second {
+  padding-bottom: 35%;
+  width: 100%;
+  object-fit: contain;
+}
+
+      .mob-quote-section {
+        display:none !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: -webkit-fill-available;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Heading Styles */
+.mob-legendary-quotes {
+  position: relative;
+  left: -1%;
+  bottom: auto;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* Quote Container */
+.mob-quote-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+/* Last Quote Container (no bottom margin) */
+.mob-quote-container-last {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Quote Block */
+.mob-quote-block {
+  margin-bottom: 5%;
+  text-align: center;
+  width: 60%;
+}
+
+/* Quote Images */
+.mob-quote-image {
+  width: 40%;
+  object-fit: contain;
 }
 
       @keyframes fade {
@@ -536,22 +663,21 @@
           display: inherit;
         }
         .carousel2 {
-            height: 150px;
+          height: 150px;
         }
         .carousel-nav {
           width: 140%;
           left: -20%;
         }
-        .carousel-nav2{
-            width: 180%;
-            left: -40%;
+        .carousel-nav2 {
+          width: 180%;
+          left: -40%;
         }
         .first-area {
-            display: none;
-
+          display: none;
         }
         .second-area {
-            display: none;
+          display: none;
         }
         .music-cards {
           flex-wrap: wrap;
@@ -561,20 +687,34 @@
           padding: 2%;
         }
         .hero {
-            width: 100%;
-    gap: var(--gap-5xl);
-    padding-top: var(--padding-13xl);
-    padding-bottom: var(--padding-13xl);
-    box-sizing: border-box;
-  }
+          width: 100%;
+          gap: var(--gap-5xl);
+          padding-top: var(--padding-13xl);
+          padding-bottom: var(--padding-13xl);
+          box-sizing: border-box;
+        }
 
-  .collective-resources {
-        font-size: var(--font-size-16xl);
-        line-height: 2.188rem;
-      }
-      .video-circle {
-        width: 50px;
-      }
+        .collective-resources {
+          font-size: var(--font-size-16xl);
+          line-height: 2.188rem;
+        }
+        .video-circle {
+          width: 50px;
+        }
+        .quote-text {
+          font-size: 16px;
+        }
+
+        .quote-name {
+          font-size: 14px;
+        }
+
+        .desktop-quote-section {
+            display: none;
+        }
+        .mob-quote-section {
+            display: inherit !important;
+        }
       }
       @media screen and (max-width: 497px) {
         .section-1 {
@@ -596,6 +736,13 @@
         .enrollText {
           font-size: "0.4rem";
         }
+        .quote-text {
+          font-size: 14px;
+        }
+
+        .quote-name {
+          font-size: 12px;
+        }
       }
       @media screen and (max-width: 350px) {
         .headingText {
@@ -605,12 +752,12 @@
           width: 28%;
         }
         .collective-resources {
-        font-size: var(--font-size-7xl);
-        line-height: 1.625rem;
-      }
-      .video-circle {
-        width: 30px;
-      }
+          font-size: var(--font-size-7xl);
+          line-height: 1.625rem;
+        }
+        .video-circle {
+          width: 30px;
+        }
       }
 
       @media screen and (max-width: 1346px) {
@@ -639,7 +786,7 @@
           font-size: 20px;
         }
         #img1 {
-            width: 25%;
+          width: 25%;
         }
       }
 
@@ -648,12 +795,21 @@
           font-size: 16px;
         }
         .midHeading {
-            font-size: var(--font-size-16xl);
+          font-size: var(--font-size-16xl);
         }
       }
       @media screen and (max-width: 1415px) {
         .card {
           width: 25%;
+        }
+        .legendary-quotes {
+            font-size: 50px;
+        }
+      }
+
+      @media screen and (max-width: 1017px) {
+        .legendary-quotes {
+            font-size: 35px;
         }
       }
       @media screen and (max-width: 1180px) {
@@ -661,20 +817,20 @@
           width: 20%;
         }
         #img2 {
-            width: 100%;
+          width: 100%;
         }
       }
 
       @media screen and (max-width: 533px) {
         #img2 {
-
-            width: 70vw;
-            margin-top: 2rem;        }
+          width: 70vw;
+          margin-top: 2rem;
+        }
         .checklist {
-            flex-wrap: wrap;
+          flex-wrap: wrap;
         }
         .redTxt {
-            font-size: var(--font-size-sm);
+          font-size: var(--font-size-sm);
         }
       }
     </style>
@@ -929,103 +1085,118 @@
 
       <section class="mixer">
         <div class="margin-left">
-            <div
-          class="subtitle redTxt"
-          style="
-            margin-bottom: 1%;
-            color: #ff444e;
-            width: 40%;
-            text-align: left;
-          "
-        >
-          Personalized guidance with (enhanced practices/more effective
-          practices) to master Ableton Live.
-        </div>
-        <div class="headingText" style="font-weight: 700">
-          Music Mixer Course
-        </div>
+          <div
+            class="subtitle redTxt"
+            style="
+              margin-bottom: 1%;
+              color: #ff444e;
+              width: 40%;
+              text-align: left;
+            "
+          >
+            Personalized guidance with (enhanced practices/more effective
+            practices) to master Ableton Live.
+          </div>
+          <div class="headingText" style="font-weight: 700">
+            Music Mixer Course
+          </div>
 
-        <div class="checklist">
-          <div class="checks">
-            <div class="checkline">
-              <img
-                style="width: 24px; height: 24px"
-                alt="tick"
-                src="./public/home/tick-circle.svg"
-              />
-              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
-                Learn Basic
+          <div class="checklist">
+            <div class="checks">
+              <div class="checkline">
+                <img
+                  style="width: 24px; height: 24px"
+                  alt="tick"
+                  src="./public/home/tick-circle.svg"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="text-align: left; margin: 0; color: #0e0606"
+                >
+                  Learn Basic
+                </div>
+              </div>
+              <div class="checkline">
+                <img
+                  style="width: 24px; height: 24px"
+                  alt="tick"
+                  src="./public/home/tick-circle.svg"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="text-align: left; margin: 0; color: #0e0606"
+                >
+                  Start to Produce Music Your Own
+                </div>
+              </div>
+              <div class="checkline">
+                <img
+                  style="width: 24px; height: 24px"
+                  alt="tick"
+                  src="./public/home/tick-circle.svg"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="text-align: left; margin: 0; color: #0e0606"
+                >
+                  Learn from International Mentors
+                </div>
+              </div>
+              <div class="checkline">
+                <img
+                  style="width: 24px; height: 24px"
+                  alt="tick"
+                  src="./public/home/tick-circle.svg"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="text-align: left; margin: 0; color: #0e0606"
+                >
+                  Produced 4-5 mix ups
+                </div>
+              </div>
+              <div class="checkline">
+                <img
+                  style="width: 24px; height: 24px"
+                  alt="tick"
+                  src="./public/home/tick-circle.svg"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="text-align: left; margin: 0; color: #0e0606"
+                >
+                  Recognized certificate
+                </div>
+              </div>
+              <div class="checkline enrollbtn" style="margin-top: 20%">
+                <img
+                  style="object-fit: contain"
+                  alt="logo"
+                  src="./public/small-candles.png"
+                  loading="lazy"
+                />
+                <div
+                  class="subtitle redTxt"
+                  style="
+                    font-family: var(--font-be-vietnam-pro);
+                    font-weight: 500;
+                    color: #0e0606;
+                  "
+                >
+                  Enroll now
+                </div>
               </div>
             </div>
-            <div class="checkline">
+
+            <div class="mixer-img2">
               <img
-                style="width: 24px; height: 24px"
-                alt="tick"
-                src="./public/home/tick-circle.svg"
-              />
-              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
-                Start to Produce Music Your Own
-              </div>
-            </div>
-            <div class="checkline">
-              <img
-                style="width: 24px; height: 24px"
-                alt="tick"
-                src="./public/home/tick-circle.svg"
-              />
-              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
-                Learn from International Mentors
-              </div>
-            </div>
-            <div class="checkline">
-              <img
-                style="width: 24px; height: 24px"
-                alt="tick"
-                src="./public/home/tick-circle.svg"
-              />
-              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
-                Produced 4-5 mix ups
-              </div>
-            </div>
-            <div class="checkline">
-              <img
-                style="width: 24px; height: 24px"
-                alt="tick"
-                src="./public/home/tick-circle.svg"
-              />
-              <div class="subtitle redTxt" style="text-align: left; margin: 0; color: #0e0606">
-                Recognized certificate
-              </div>
-            </div>
-            <div class="checkline enrollbtn" style="margin-top: 20%">
-              <img
-                style="object-fit: contain"
-                alt="logo"
-                src="./public/small-candles.png"
+                src="./public/home/mixer-img2.png"
+                alt="image2"
                 loading="lazy"
+                id="img2"
               />
-              <div
-                class="subtitle redTxt"
-                style="
-                  font-family: var(--font-be-vietnam-pro);
-                  font-weight: 500;
-                  color: #0e0606;
-                "
-              >
-                Enroll now
-              </div>
             </div>
           </div>
-
-          <div class="mixer-img2">
-            <img
-              src="./public/home/mixer-img2.png"
-              alt="image2"
-              loading="lazy"
-              id="img2"
-            />
-          </div>
-        </div>
         </div>
         <img
           src="./public/home/section1-lines.svg"
@@ -1043,137 +1214,123 @@
         <img
           src="./public/home/mixer-img1.png"
           id="img1"
-          style="
-            object-fit: contain;
-            position: absolute;
-            top:10%;
-            right: 10%;          "
+          style="object-fit: contain; position: absolute; top: 10%; right: 10%"
         />
-
       </section>
 
       <section class="skills">
-        <div class="midHeading">
-            Gain Skills to Work in the Following Areas
-        </div>
+        <div class="midHeading">Gain Skills to Work in the Following Areas</div>
 
         <div class="first-area">
-            <img
+          <img
             src="./public/home/area1.svg"
             alt="area1"
             loading="lazy"
             class="area"
-            />
-            <img
+          />
+          <img
             src="./public/home/area2.svg"
             alt="area1"
             loading="lazy"
             class="area"
-            />
-            <img
+          />
+          <img
             src="./public/home/area3.svg"
             alt="area1"
             loading="lazy"
             class="area"
-            />
+          />
         </div>
         <div class="second-area">
-            <img
+          <img
             src="./public/home/area4.svg"
             alt="area1"
             loading="lazy"
-            style="width: 22%;"
-            />
-            <img
+            style="width: 22%"
+          />
+          <img
             src="./public/home/area5.svg"
             alt="area1"
             loading="lazy"
-            style="width: 22%;"
-            />
-            <img
+            style="width: 22%"
+          />
+          <img
             src="./public/home/area6.svg"
             alt="area1"
             loading="lazy"
-            style="width: 22%;"
-                />
+            style="width: 22%"
+          />
         </div>
 
-
         <div class="carousel-container2">
-            <div class="carousel2">
-              <div class="slide2 active">
-                <img
-                  src="./public/home/area1.svg"
-                  class="resize-img"
-                  alt="Image 1"
-                />
-              </div>
-              <div class="slide2">
-                <img
-                  src="./public/home/area2.svg"
-                  class="resize-img"
-                  alt="Image 2"
-                />
-              </div>
-              <div class="slide2">
-                <img
-                  src="./public/home/area3.svg"
-                  class="resize-img"
-                  alt="Image 3"
-                />
-              </div>
-              <div class="slide2">
-                <img
-                  src="./public/home/area4.svg"
-                  class="resize-img"
-                  alt="Image 4"
-                />
-              </div>
-
-              <div class="slide2">
-                <img
-                  src="./public/home/area5.svg"
-                  class="resize-img"
-                  alt="Image 4"
-                />
-              </div>
-              <div class="slide2">
-                <img
-                  src="./public/home/area6.svg"
-                  class="resize-img"
-                  alt="Image 4"
-                />
-              </div>
+          <div class="carousel2">
+            <div class="slide2 active">
+              <img
+                src="./public/home/area1.svg"
+                class="resize-img"
+                alt="Image 1"
+              />
             </div>
-  
-            <div class="carousel-nav2">
-              <button class="nav-button2 prev2">&#10094;</button>
-              <button class="nav-button2 next2">&#10095;</button>
+            <div class="slide2">
+              <img
+                src="./public/home/area2.svg"
+                class="resize-img"
+                alt="Image 2"
+              />
+            </div>
+            <div class="slide2">
+              <img
+                src="./public/home/area3.svg"
+                class="resize-img"
+                alt="Image 3"
+              />
+            </div>
+            <div class="slide2">
+              <img
+                src="./public/home/area4.svg"
+                class="resize-img"
+                alt="Image 4"
+              />
+            </div>
+
+            <div class="slide2">
+              <img
+                src="./public/home/area5.svg"
+                class="resize-img"
+                alt="Image 4"
+              />
+            </div>
+            <div class="slide2">
+              <img
+                src="./public/home/area6.svg"
+                class="resize-img"
+                alt="Image 4"
+              />
             </div>
           </div>
+
+          <div class="carousel-nav2">
+            <button class="nav-button2 prev2">&#10094;</button>
+            <button class="nav-button2 next2">&#10095;</button>
+          </div>
+        </div>
       </section>
-      
 
       <section class="hero">
-        <div style="align-self: center;">
+        <div style="align-self: center">
           <h2 class="collective-resources">Collective Resources</h2>
         </div>
         <div>
           <div
-            style="min-width: 100%; overflow-x: hidden;"
+            style="min-width: 100%; overflow-x: hidden"
             class="logoSliderParent"
           >
             <div class="logoSlider">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                "
-              >
+              <div style="display: flex; justify-content: space-between">
                 <img
                   src="./public/image-509@2x.png"
                   alt="company logo"
-                  style="object-fit: contain; width: 10%; height: auto;"
+                  style="object-fit: contain; width: 10%; height: auto"
                 />
                 <img
                   src="./public/image-511@2x.png"
@@ -1251,12 +1408,7 @@
             class="logoSliderParent"
           >
             <div class="logoSlider">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                "
-              >
+              <div style="display: flex; justify-content: space-between">
                 <img
                   src="./public/image-512@2x.png"
                   alt="company logo"
@@ -1333,11 +1485,91 @@
         </div>
       </section>
 
-          <section style="width: 90%; margin: 0 auto; text-align: center; padding: 20px 0; position: relative;">
-            <img src="./public/home/video-img.svg" alt="Video Image" style="max-width: 100%; height: auto;">
-            <img class="video-circle" src="./public/video-circle.svg" alt="Video Circle">
-        </section>
+      <section
+        style="
+          width: 90%;
+          margin: 0 auto;
+          text-align: center;
+          padding: 20px 0;
+          position: relative;
+        "
+      >
+        <img
+          src="./public/home/video-img.svg"
+          alt="Video Image"
+          style="max-width: 100%; height: auto"
+        />
+        <img
+          class="video-circle"
+          src="./public/video-circle.svg"
+          alt="Video Circle"
+        />
+      </section>
+
+      <section class="desktop-quote-section">
+        <!-- First Div (20% width) - Quote first, then Image -->
+        <div class="desktop-quote-col-small">
+          <div class="desktop-quote-container-first"> 
+            <div class="quote-text">"Where words fail, music speaks"</div> 
+            <div class="quote-name">- Hans Christian Andersen</div> 
+          </div>
+          <img src="./public/home/quote-img1.svg" class="desktop-quote-image" alt="Music quote illustration 1">
+        </div>
+        
+        <!-- Second Div (20% width) - Image first, then Quote -->
+        <div class="desktop-quote-col-small">
+          <img src="./public/home/quote-img2.svg" class="desktop-quote-image-second" alt="Music quote illustration 2">
+          <div> 
+            <div class="quote-text">"Music is the universal language of mankind"</div> 
+            <div class="quote-name">- Henry Wadsworth Longfellow</div> 
+          </div>
+        </div>
+        
+        <!-- Third Div (40% width) - Quote first, then Image with padding top -->
+        <div class="desktop-quote-col-large">
+          <div class="desktop-quote-container-third"> 
+            <div class="quote-text">"Music expresses that which cannot be put into words and that which cannot remain silent"</div> 
+            <div class="quote-name">- Hans Christian Andersen</div> 
+          </div>
+          <img src="./public/home/quote-img3.svg" class="desktop-quote-image" alt="Music quote illustration 3">
+        </div>
       
+        <div class="legendary-quotes">Legendary Quotes</div>
+      </section>
+
+      
+
+      <section class="mob-quote-section">
+        <!-- Heading at the top -->
+        <div class="legendary-quotes mob-legendary-quotes">Legendary Quotes</div>
+        
+        <!-- First Quote and Image -->
+        <div class="mob-quote-container">
+          <div class="mob-quote-block"> 
+            <div class="quote-text">"Where words fail, music speaks"</div> 
+            <div class="quote-name">- Hans Christian Andersen</div> 
+          </div>
+          <img src="./public/home/quote-img1.svg" class="mob-quote-image" alt="Music quote illustration 1">
+        </div>
+        
+        <!-- Second Quote and Image -->
+        <div class="mob-quote-container">
+          <div class="mob-quote-block"> 
+            <div class="quote-text">"Music is the universal language of mankind"</div> 
+            <div class="quote-name">- Henry Wadsworth Longfellow</div> 
+          </div>
+          <img src="./public/home/quote-img2.svg" class="mob-quote-image" alt="Music quote illustration 2">
+        </div>
+        
+        <!-- Third Quote and Image -->
+        <div class="mob-quote-container-last">
+          <div class="mob-quote-block"> 
+            <div class="quote-text">"Music expresses that which cannot be put into words and that which cannot remain silent"</div> 
+            <div class="quote-name">- Hans Christian Andersen</div> 
+          </div>
+          <img src="./public/home/quote-img3.svg" class="mob-quote-image" alt="Music quote illustration 3">
+        </div>
+      </section>
 
       <section class="graph-sec">
         <div
