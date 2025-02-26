@@ -457,6 +457,7 @@
         font-family: var(--font-bricolage-grotesque);
       }
       .collective-resources {
+        color: #0e0606;
         font-size: var(--font-size-16xl);
         line-height: 2.188rem;
       }
@@ -620,6 +621,156 @@
   object-fit: contain;
 }
 
+.card-slider-container {
+      position: relative;
+      width: 100%;
+      /* height: 100%; */
+      min-height: 300px;
+      overflow: hidden;
+    }
+    
+    .card-slider {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      cursor: grab;
+      transition: transform 0.3s ease-out;
+    }
+    
+    .card-slider:active {
+      cursor: grabbing;
+    }
+    
+    .card-slide {
+      position: relative;
+      min-width: 300px;
+      padding-top:30px;
+      /* height: 85%; */
+      margin: 0 15px;
+      /* border-radius: 15px; */
+      overflow: hidden;
+      transition: all 0.5s ease;
+      transform-origin: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card-slide img {
+      width: 100%;
+      /* height: 100%; */
+      object-fit: cover;
+    }
+    
+    .card-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.2) 100%); */
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1;
+    }
+    
+    .card-slide:not(.card-active) {
+      transform: scale(0.8);
+      filter: blur(3px);
+    }
+    
+    .card-slide:not(.card-active)::before {
+      opacity: 1;
+    }
+    
+    .card-slide.card-active {
+      transform: scale(1.1);
+      z-index: 2;
+      /* box-shadow: 0 10px 30px rgba(0,0,0,0.2); */
+    }
+    
+    .card-slider-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .card-slider-nav-item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-crimson);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .card-slider-nav-item.card-active {
+      background-color: var(--color-crimson);
+      width: 30px;
+      border-radius: 5px;
+    }
+
+    .subscribe-btn {
+        background-color: var(--color-crimson);
+        border-radius: var(--br-11xl);
+        /* width: 50%; */
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 5%;
+        padding-right: 5%;
+        cursor: pointer;
+        width:55%;
+    }
+
+    .join-yt {
+        color: #0e0606;
+        font-size: 44px;
+        line-height: 2.188rem;
+        font-weight: 500;
+      }
+
+      .para-text {
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+        color: var(--paragraph);
+      }
+
+    .subscribe-text {
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+        text-align: center;
+    }
+
+    .white-candles {
+        object-fit: contain;
+    }
+
+    .card-slide-sec {
+        width:-webkit-fill-available; 
+        margin:5%; 
+        display:flex; 
+        flex-direction:row; 
+        justify-content: space-between;
+    }
+
+    .left-div {
+        width:27%; display: flex; flex-direction: column;
+    }
+    .right-div {
+        width:70%;
+    }
+
       @keyframes fade {
         from {
           opacity: 0.4;
@@ -629,7 +780,21 @@
         }
       }
 
+      
+
       @media screen and (max-width: 768px) {
+        .subscribe-text {
+            font-size:12px;
+        }
+
+        .join-yt {
+            font-size: 30px;
+            margin-bottom:16px !important;
+        }
+        .para-text {
+            font-size: 12px;
+            margin-bottom:25px !important;
+        }
         .section-1 {
           padding-top: 25%;
         }
@@ -742,6 +907,15 @@
 
         .quote-name {
           font-size: 12px;
+        }
+        .card-slide-sec {
+            flex-direction: column;
+        }
+        .left-div {
+            width: 80%;
+        }
+        .right-div {
+            width: 90%;
         }
       }
       @media screen and (max-width: 350px) {
@@ -1506,6 +1680,47 @@
         />
       </section>
 
+      <section class="card-slide-sec">
+        <div class="left-div">
+            <div class="join-yt" style="margin-bottom: 24px;">Join Our Youtube Channel</div>
+            <div class="para-text" style="margin-bottom: 40px;">Transform Your Talent Into a Career with Our Artist Development Program</div>
+            
+            <div class="subscribe-btn">
+                <img
+                  loading="lazy"
+                  class="white-candles"
+                  src="./public/white-candle.png"
+                />
+                <span class="subscribe-text">Subscribe Channel</span>
+            </div>
+        </div>
+
+        <div class="right-div">
+            <div class="card-slider-container">
+                <div class="card-slider">
+                  <div class="card-slide">
+                    <img src="./public/home/slide1.svg" alt="Image 1" style="object-fit: contain;">
+                  </div>
+                  <div class="card-slide">
+                    <img src="./public/home/slide2.svg" alt="Image 2" style="object-fit: contain;">
+                  </div>
+                  <div class="card-slide">
+                    <img src="./public/home/slide1.svg" alt="Image 3" style="object-fit: contain;">
+                  </div>
+                  <div class="card-slide">
+                    <img src="./public/home/slide2.svg" alt="Image 3" style="object-fit: contain;">
+                  </div>
+                </div>
+                <div class="card-slider-nav">
+                  <div class="card-slider-nav-item"></div>
+                  <div class="card-slider-nav-item"></div>
+                  <div class="card-slider-nav-item"></div>
+                  <div class="card-slider-nav-item"></div>
+                </div>
+              </div>
+        </div>
+      </section>
+
       <section class="desktop-quote-section">
         <!-- First Div (20% width) - Quote first, then Image -->
         <div class="desktop-quote-col-small">
@@ -1570,6 +1785,7 @@
           <img src="./public/home/quote-img3.svg" class="mob-quote-image" alt="Music quote illustration 3">
         </div>
       </section>
+
 
       <section class="graph-sec">
         <div
@@ -1768,5 +1984,6 @@
       </footer>
     </div>
     <script src="./javascript/carousel.js" defer></script>
+    <script src="./javascript/horizontalSlider.js" defer></script>
   </body>
 </html>
