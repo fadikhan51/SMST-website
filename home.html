@@ -881,6 +881,69 @@
         font-weight:500;
     }
 
+    .mentors {
+        color: #0e0606;
+        font-size: 68px;
+        width:50%;
+        font-weight: 600;
+    }
+
+    .paragraph-text {
+        color: var(--paragraph);
+        font-size: 18px;
+        font-family: var(--font-be-vietnam-pro);
+        text-align: left;
+    }
+
+    .paragraph-extra {
+        width: 35%;
+        position: relative;
+        top: 4rem;
+    }
+
+    #mentors-div {
+        display:flex; 
+        position: relative;
+        flex-direction:row; 
+        justify-content: space-between;
+    }
+
+    .shudhansu {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        gap:3%;
+        align-items: flex-end;
+        width: 50%;
+    }
+
+    .rectangle {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 44px;
+        font-family: var(--font-bricolage-grotesque);
+        color: #0e0606;
+        font-weight: 500;
+    }
+
+    .experience {
+        color: var(--paragraph);
+        font-size : 16px;
+        font-family: var(--font-be-vietnam-pro);
+    }
+
+    .mentor2 {
+        object-fit: contain; position:absolute; right: 0; top:33%;  width: 25% ;
+    }
+
+    .yellow-rect {
+        object-fit: contain; width: 24px;
+    }
+
       @keyframes fade {
         from {
           opacity: 0.4;
@@ -1026,28 +1089,21 @@
           width: 90%;
         }
       }
-      @media screen and (max-width: 350px) {
-        .headingText {
-          font-size: var(--font-size-lgi);
-        }
-        .language {
-          width: 28%;
-        }
-        .collective-resources {
-          font-size: var(--font-size-7xl);
-          line-height: 1.625rem;
-        }
-        .video-circle {
-          width: 30px;
-        }
-      }
-
       @media screen and (max-width: 1346px) {
         #pic3 {
           display: none;
         }
       }
       @media screen and (max-width: 1017px) {
+        .mentors {
+            font-size: 45px;
+        }
+        .paragraph-text {
+            font-size: 14px;
+        }
+        .paragraph-extra {
+            top : 1.5rem;
+        }
         #pic2 {
           display: none;
         }
@@ -1073,6 +1129,37 @@
       }
 
       @media screen and (max-width: 768px) {
+        .shudhansu {
+            width: 80%;
+            padding-top: 10%;
+        }
+        .title {
+            font-size: 30px;
+        }
+        .experience {
+            font-size: 12px;
+        }
+        .yellow-rect {
+            width: 14px;
+        }
+        .mentor2 {
+            display: none;
+        }
+        #mentors-div {
+            flex-direction: column;
+            justify-content: inherit;
+        }
+        .mentors {
+            font-size: 35px;
+            width: 70%;
+        }
+        .paragraph-text {
+            font-size: 12px;
+        }
+        .paragraph-extra {
+            width: 60%;
+            position : inherit;
+        }
         .graph-text {
           font-size: 16px;
         }
@@ -1138,6 +1225,18 @@
       }
 
       @media screen and (max-width: 533px) {
+        .title {
+            font-size: 25px;
+        }
+        .experience {
+            font-size: 10px;;
+        }
+        .yellow-rect {
+            width: 10px;
+        }
+        .rectangle {
+            gap: 0.5rem;
+        }
         #img2 {
           width: 70vw;
           margin-top: 2rem;
@@ -1150,6 +1249,39 @@
         }
         .gallery-wrapper {
             padding-top: 25%;
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .mentors {
+            width: 90%;
+        }
+        .paragraph-extra {
+            width: 90%;
+        }
+        .title {
+            font-size: 18px;
+        }
+        .experience {
+            font-size: 8px;;
+        }
+        .yellow-rect {
+            width: 8px;
+        }
+        .rectangle {
+            gap: 0.5rem;
+        }
+        .headingText {
+          font-size: var(--font-size-lgi);
+        }
+        .language {
+          width: 28%;
+        }
+        .collective-resources {
+          font-size: var(--font-size-7xl);
+          line-height: 1.625rem;
+        }
+        .video-circle {
+          width: 30px;
         }
       }
     </style>
@@ -2034,9 +2166,7 @@
         </div>
       </section>
 
-      <section
-        class="ai-sec"
-      >
+      <section class="ai-sec">
         <div class="ai-first-div">
           <div style="flex: 1">
             <img
@@ -2091,6 +2221,61 @@
               </div>
           </div>
         </div>
+      </section>
+
+      
+      <section class="mixer">
+        <div style="margin:5%; ">
+            <div id="mentors-div">
+                <div class="mentors">Mentors From All Around the World</div>
+                <div class="paragraph-text paragraph-extra">Personalized guidance with (enhanced practices/more effective practices) to master Ableton Live. Uplift your knowledge and make your surroundings dance over your music. </div>
+            </div>
+
+            <div class="shudhansu">
+                <img 
+                style="object-fit: contain; width:70%;"
+                alt="mentor"
+                loading="lazy"
+                src="./public/home/shudhansu.svg"
+                />
+
+                <div class="rectangle">
+                    <img 
+                    src="./public/home/side-rectangle.svg"
+                    loading="lazy"
+                    alt="rectangle"
+                    class="yellow-rect"
+                    />
+
+                    <div class="title">
+                        Shudhansu Kumar
+                    </div>
+                    <div class="experience">
+                        5+ years of experience | Won Awards | Featured Music Mixer
+                    </div>
+                </div>
+            </div>
+
+            <img 
+            class="mentor2"
+            loading="eager"
+            alt="mentor"
+            src="./public/home/mentor2.svg"
+            />
+        </div>
+        <img
+          src="./public/home/section1-lines.svg"
+          style="
+            width: 100%;
+            object-fit: contain;
+            position: absolute;
+            opacity: 0.7;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          "
+        />
       </section>
 
       <footer class="footer">
