@@ -775,175 +775,198 @@
       }
 
       .gallery-wrapper {
-      position: relative;
-      padding-top: 10%;
-      width: 100%;
-      height: 100%;
-      /* min-height: 300px; */
-      overflow: hidden;
-    }
-    
-    .gallery-track {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      cursor: grab;
-      transition: transform 0.3s ease-out;
-    }
-    
-    .gallery-track:active {
-      cursor: grabbing;
-    }
-    
-    .gallery-item {
-      position: relative;
-      min-width: 280px;
-      height: 85%;
-      margin: 0 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .gallery-controls {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .gallery-counter {
-      font-family: var(--font-be-vietnam-pro);
-      font-size: 16px;
-      color: var(--paragraph);
-      line-height: 156%;
-      letter-spacing: 0.5rem;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-    
-    .gallery-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #DEB6B6;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .gallery-dot.is-active {
-      background-color: var(--color-crimson, #DC143C);
-      width: 30px;
-      border-radius: 5px;
-    }
+        position: relative;
+        padding-top: 10%;
+        width: 100%;
+        height: 100%;
+        /* min-height: 300px; */
+        overflow: hidden;
+      }
 
-    .ai-sec {
+      .gallery-track {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        cursor: grab;
+        transition: transform 0.3s ease-out;
+      }
+
+      .gallery-track:active {
+        cursor: grabbing;
+      }
+
+      .gallery-item {
+        position: relative;
+        min-width: 280px;
+        height: 85%;
+        margin: 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .gallery-counter {
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+        color: var(--paragraph);
+        line-height: 156%;
+        letter-spacing: 0.5rem;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .gallery-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #deb6b6;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-dot.is-active {
+        background-color: var(--color-crimson, #dc143c);
+        width: 30px;
+        border-radius: 5px;
+      }
+
+      .ai-sec {
         width: -webkit-fill-available;
-          display: flex;
-          flex-direction: row;
-          padding: 5%;
-          gap:2%;
-          align-items: flex-end;
-          background-color: var(--color-lightpink);
-    }
+        display: flex;
+        flex-direction: row;
+        padding: 5%;
+        gap: 2%;
+        align-items: flex-end;
+        background-color: var(--color-lightpink);
+      }
 
-    .ai-first-div {
-        width: 28%; display: flex; flex-direction: column;
-    }
+      .ai-first-div {
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+      }
 
-    .ai-img {
-        flex: 1; display:flex; align-items:flex-end;
-    }
+      .ai-img {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+      }
 
-    .ai-second-div {
+      .ai-second-div {
         width: 67%;
         display: flex;
         flex-direction: column;
-    }
+      }
 
-    .ai-heading-text {
-        flex: 1; display:flex; justify-content:flex-end;
-    }
+      .ai-heading-text {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
 
-    .ai-heading-text-inner {
-        color:#0e0606; 
-        width:70%; 
-        text-align: right; 
-        margin-bottom: 10%; 
-        font-weight:500;
-    }
+      .ai-heading-text-inner {
+        color: #0e0606;
+        width: 70%;
+        text-align: right;
+        margin-bottom: 10%;
+        font-weight: 500;
+      }
 
-    .mentors {
+      .mentors {
         color: #0e0606;
         font-size: 68px;
-        width:50%;
+        width: 50%;
         font-weight: 600;
-    }
+      }
 
-    .paragraph-text {
+      .paragraph-text {
         color: var(--paragraph);
         font-size: 18px;
         font-family: var(--font-be-vietnam-pro);
         text-align: left;
-    }
+      }
 
-    .paragraph-extra {
+      .paragraph-extra {
         width: 35%;
         position: relative;
         top: 4rem;
-    }
+      }
 
-    #mentors-div {
-        display:flex; 
+      #mentors-div {
+        display: flex;
         position: relative;
-        flex-direction:row; 
+        flex-direction: row;
         justify-content: space-between;
-    }
+      }
 
-    .shudhansu {
+      .shudhansu {
         margin-top: 5%;
         display: flex;
         flex-direction: row;
-        gap:3%;
+        gap: 3%;
         align-items: flex-end;
         width: 50%;
-    }
+      }
 
-    .rectangle {
+      .rectangle {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-    }
+      }
 
-    .title {
+      .title {
         font-size: 44px;
         font-family: var(--font-bricolage-grotesque);
         color: #0e0606;
         font-weight: 500;
-    }
+      }
 
-    .experience {
+      .experience {
         color: var(--paragraph);
-        font-size : 16px;
+        font-size: 16px;
         font-family: var(--font-be-vietnam-pro);
-    }
+      }
 
-    .mentor2 {
-        object-fit: contain; position:absolute; right: 0; top:33%;  width: 25% ;
-    }
+      .mentor2 {
+        object-fit: contain;
+        position: absolute;
+        right: 0;
+        top: 33%;
+        width: 25%;
+      }
 
-    .yellow-rect {
-        object-fit: contain; width: 24px;
-    }
+      .yellow-rect {
+        object-fit: contain;
+        width: 24px;
+      }
 
+      .paragraph-extra2 {
+        width: 90%;
+      }
+
+      .heading-extra {
+        font-weight: 700;
+        width: 80%;
+      }
+
+      .covered-extra {
+        margin-right:5%; margin-top:0; display: flex; flex-direction: row; gap:5%;
+      }
       @keyframes fade {
         from {
           opacity: 0.4;
@@ -953,6 +976,11 @@
         }
       }
 
+      @media screen and (max-width: 840px) {
+        .instrument {
+            width: 50%;
+        }
+      }
       @media screen and (max-width: 768px) {
         .subscribe-text {
           font-size: 12px;
@@ -1053,6 +1081,13 @@
         }
       }
       @media screen and (max-width: 497px) {
+        .instrument {
+            width: 80%;
+            margin-top: 5%;
+        }
+        .covered-extra {
+            flex-direction :column;
+        }
         .section-1 {
           padding-top: 30%;
         }
@@ -1096,13 +1131,13 @@
       }
       @media screen and (max-width: 1017px) {
         .mentors {
-            font-size: 45px;
+          font-size: 45px;
         }
         .paragraph-text {
-            font-size: 14px;
+          font-size: 14px;
         }
         .paragraph-extra {
-            top : 1.5rem;
+          top: 1.5rem;
         }
         #pic2 {
           display: none;
@@ -1130,35 +1165,35 @@
 
       @media screen and (max-width: 768px) {
         .shudhansu {
-            width: 80%;
-            padding-top: 10%;
+          width: 80%;
+          padding-top: 10%;
         }
         .title {
-            font-size: 30px;
+          font-size: 30px;
         }
         .experience {
-            font-size: 12px;
+          font-size: 12px;
         }
         .yellow-rect {
-            width: 14px;
+          width: 14px;
         }
         .mentor2 {
-            display: none;
+          display: none;
         }
         #mentors-div {
-            flex-direction: column;
-            justify-content: inherit;
+          flex-direction: column;
+          justify-content: inherit;
         }
         .mentors {
-            font-size: 35px;
-            width: 70%;
+          font-size: 35px;
+          width: 70%;
         }
         .paragraph-text {
-            font-size: 12px;
+          font-size: 12px;
         }
         .paragraph-extra {
-            width: 60%;
-            position : inherit;
+          width: 60%;
+          position: inherit;
         }
         .graph-text {
           font-size: 16px;
@@ -1175,38 +1210,38 @@
           font-size: 50px;
         }
         .ai-sec {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
         .ai-first-div {
-            width: 80%;
-            flex-direction: row;
+          width: 80%;
+          flex-direction: row;
         }
         .ai-second-div {
-            margin-top: 50px;
-            width: 80%;
+          margin-top: 50px;
+          width: 80%;
         }
         .ai-heading-text {
-            justify-content: flex-start;
+          justify-content: flex-start;
         }
         .ai-heading-text-inner {
-            text-align: left;
-            margin-bottom: 5%;
-            font-size: 30px;
+          text-align: left;
+          margin-bottom: 5%;
+          font-size: 30px;
         }
         .gallery-controls {
-            right: auto;
-            left: 20px;
+          right: auto;
+          left: 20px;
         }
         .gallery-wrapper {
-            padding-top: 18%;
+          padding-top: 18%;
         }
         #online {
-            width: 80%;
+          width: 80%;
         }
         #ai {
-            width: 80%;
+          width: 80%;
         }
       }
 
@@ -1216,6 +1251,13 @@
         }
       }
       @media screen and (max-width: 1180px) {
+        .heading-extra {
+            width:90%;
+        }
+        .paragraph-extra2 {
+            width: 90%;
+            margin-bottom:4%;
+        }
         .card {
           width: 20%;
         }
@@ -1226,16 +1268,16 @@
 
       @media screen and (max-width: 533px) {
         .title {
-            font-size: 25px;
+          font-size: 25px;
         }
         .experience {
-            font-size: 10px;;
+          font-size: 10px;
         }
         .yellow-rect {
-            width: 10px;
+          width: 10px;
         }
         .rectangle {
-            gap: 0.5rem;
+          gap: 0.5rem;
         }
         #img2 {
           width: 70vw;
@@ -1248,27 +1290,27 @@
           font-size: var(--font-size-sm);
         }
         .gallery-wrapper {
-            padding-top: 25%;
+          padding-top: 25%;
         }
       }
       @media screen and (max-width: 350px) {
         .mentors {
-            width: 90%;
+          width: 90%;
         }
         .paragraph-extra {
-            width: 90%;
+          width: 90%;
         }
         .title {
-            font-size: 18px;
+          font-size: 18px;
         }
         .experience {
-            font-size: 8px;;
+          font-size: 8px;
         }
         .yellow-rect {
-            width: 8px;
+          width: 8px;
         }
         .rectangle {
-            gap: 0.5rem;
+          gap: 0.5rem;
         }
         .headingText {
           font-size: var(--font-size-lgi);
@@ -2170,8 +2212,8 @@
         <div class="ai-first-div">
           <div style="flex: 1">
             <img
-            id="online"
-              style="object-fit: contain;"
+              id="online"
+              style="object-fit: contain"
               alt="circle"
               loading="lazy"
               src="./public/home/online-circle.svg"
@@ -2179,89 +2221,104 @@
           </div>
           <div class="ai-img">
             <img
-            id="ai"
-              style="object-fit: contain;"
+              id="ai"
+              style="object-fit: contain"
               alt="circle"
               loading="lazy"
               src="./public/home/ai-img.svg"
             />
           </div>
         </div>
-        <div
-          class="ai-second-div"
-        >
+        <div class="ai-second-div">
           <div class="ai-heading-text">
-            <div class='heading ai-heading-text-inner'>
-                From Teaching to Producing Records!
+            <div class="heading ai-heading-text-inner">
+              From Teaching to Producing Records!
             </div>
           </div>
-          <div style="flex: 1;">
+          <div style="flex: 1">
             <div class="gallery-wrapper">
-                <div class="gallery-controls">
-                    <div class="gallery-dot"></div>
-                    <div class="gallery-dot"></div>
-                    <div class="gallery-dot"></div>
-                    <div class="gallery-dot"></div>
-                    <div class="gallery-counter">DRAG - 1/4</div>
+              <div class="gallery-controls">
+                <div class="gallery-dot"></div>
+                <div class="gallery-dot"></div>
+                <div class="gallery-dot"></div>
+                <div class="gallery-dot"></div>
+                <div class="gallery-counter">DRAG - 1/4</div>
+              </div>
+              <div class="gallery-track">
+                <div class="gallery-item">
+                  <img
+                    src="./public/home/personalized-mentor.svg"
+                    alt="Image 1"
+                    style="object-fit: contain"
+                  />
                 </div>
-                <div class="gallery-track">
-                  <div class="gallery-item">
-                    <img src="./public/home/personalized-mentor.svg" alt="Image 1" style="object-fit: contain;">
-                  </div>
-                  <div class="gallery-item">
-                    <img src="./public/home/mon-to-fri.svg" alt="Image 2" style="object-fit: contain;">
-                  </div>
-                  <div class="gallery-item">
-                    <img src="./public/home/personalized-mentor.svg" alt="Image 3" style="object-fit: contain;">
-                  </div>
-                  <div class="gallery-item">
-                    <img src="./public/home/mon-to-fri.svg" alt="Image 2" style="object-fit: contain;">
-                  </div>
+                <div class="gallery-item">
+                  <img
+                    src="./public/home/mon-to-fri.svg"
+                    alt="Image 2"
+                    style="object-fit: contain"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./public/home/personalized-mentor.svg"
+                    alt="Image 3"
+                    style="object-fit: contain"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="./public/home/mon-to-fri.svg"
+                    alt="Image 2"
+                    style="object-fit: contain"
+                  />
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
 
-      
       <section class="mixer">
-        <div style="margin:5%; ">
-            <div id="mentors-div">
-                <div class="mentors">Mentors From All Around the World</div>
-                <div class="paragraph-text paragraph-extra">Personalized guidance with (enhanced practices/more effective practices) to master Ableton Live. Uplift your knowledge and make your surroundings dance over your music. </div>
+        <div style="margin: 5%">
+          <div id="mentors-div">
+            <div class="mentors">Mentors From All Around the World</div>
+            <div class="paragraph-text paragraph-extra">
+              Personalized guidance with (enhanced practices/more effective
+              practices) to master Ableton Live. Uplift your knowledge and make
+              your surroundings dance over your music.
             </div>
+          </div>
 
-            <div class="shudhansu">
-                <img 
-                style="object-fit: contain; width:70%;"
-                alt="mentor"
+          <div class="shudhansu">
+            <img
+              style="object-fit: contain; width: 70%"
+              alt="mentor"
+              loading="lazy"
+              src="./public/home/shudhansu.svg"
+            />
+
+            <div class="rectangle">
+              <img
+                src="./public/home/side-rectangle.svg"
                 loading="lazy"
-                src="./public/home/shudhansu.svg"
-                />
+                alt="rectangle"
+                class="yellow-rect"
+              />
 
-                <div class="rectangle">
-                    <img 
-                    src="./public/home/side-rectangle.svg"
-                    loading="lazy"
-                    alt="rectangle"
-                    class="yellow-rect"
-                    />
-
-                    <div class="title">
-                        Shudhansu Kumar
-                    </div>
-                    <div class="experience">
-                        5+ years of experience | Won Awards | Featured Music Mixer
-                    </div>
-                </div>
+              <div class="title">Shudhansu Kumar</div>
+              <div class="experience">
+                5+ years of experience | Won Awards | Featured Music Mixer
+              </div>
             </div>
+          </div>
 
-            <img 
+          <img
             class="mentor2"
             loading="eager"
             alt="mentor"
             src="./public/home/mentor2.svg"
-            />
+          />
         </div>
         <img
           src="./public/home/section1-lines.svg"
@@ -2276,6 +2333,65 @@
             transform: translate(-50%, -50%);
           "
         />
+      </section>
+
+      <section class="mixer" style="padding-top:0;">
+        <div class="margin-left covered-extra">
+          <div>
+            <div
+              class="subtitle redTxt"
+              style="
+                margin-bottom: 1%;
+                color: #ff444e;
+                width: 40%;
+                text-align: left;
+              "
+            >
+              No Experience?
+            </div>
+            <div class="headingText heading-extra">We Got You Covered!</div>
+
+            <div class="checklist" style="margin-top: 2%">
+              <div class="checks">
+                <div class="paragraph-text paragraph-extra2">
+                  School of Musical Science & Technology offers a great blend of
+                  experience, skills, and innovation that you won’t find
+                  anywhere else. At SMST, you learn and grow with experts from
+                  the Hollywood music industry. Take your first step toward the
+                  center of musical stage with SMST.
+                </div>
+                <div class="checkline enrollbtn" style="margin-top: 2%">
+                  <img
+                    style="object-fit: contain"
+                    alt="logo"
+                    src="./public/small-candles.png"
+                    loading="lazy"
+                  />
+                  <div
+                    class="subtitle redTxt"
+                    style="
+                      font-family: var(--font-be-vietnam-pro);
+                      font-weight: 500;
+                      color: #0e0606;
+                    "
+                  >
+                    Enroll now
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+            <img
+            class='instrument'
+            loading="eager"
+            alt="instrument"
+            style="object-fit: contain;"
+            src="./public/home/instrument.svg"
+            />
+          
+        </div>
       </section>
 
       <footer class="footer">
