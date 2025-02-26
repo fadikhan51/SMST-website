@@ -509,213 +509,214 @@
 
       .legendary-quotes {
         font-weight: 600;
-        font-family: var(--font-bricolage-grotesque); 
-        font-size: 68px; 
+        font-family: var(--font-bricolage-grotesque);
+        font-size: 68px;
         color: var(--color-crimson);
         position: absolute;
-        bottom:5%; left:5%
+        bottom: 5%;
+        left: 5%;
       }
 
       .desktop-quote-section {
-  position: relative;
-  margin: 5%;
-  margin-top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-}
+        position: relative;
+        margin: 5%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+      }
 
-/* First quote column */
-.desktop-quote-col-small {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 5%;
-}
+      /* First quote column */
+      .desktop-quote-col-small {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+      }
 
-/* Third quote column (larger width) */
-.desktop-quote-col-large {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 5%;
-  margin-top: 20%;
-}
+      /* Third quote column (larger width) */
+      .desktop-quote-col-large {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        margin-top: 20%;
+      }
 
-/* First quote container with spacing */
-.desktop-quote-container-first {
-  padding-bottom: 35%;
-}
+      /* First quote container with spacing */
+      .desktop-quote-container-first {
+        padding-bottom: 35%;
+      }
 
-/* Third quote container with spacing */
-.desktop-quote-container-third {
-  padding-bottom: 25%;
-}
+      /* Third quote container with spacing */
+      .desktop-quote-container-third {
+        padding-bottom: 25%;
+      }
 
-/* Quote image styles */
-.desktop-quote-image {
-  width: 100%;
-  object-fit: contain;
-}
+      /* Quote image styles */
+      .desktop-quote-image {
+        width: 100%;
+        object-fit: contain;
+      }
 
-/* Second quote image specific style */
-.desktop-quote-image-second {
-  padding-bottom: 35%;
-  width: 100%;
-  object-fit: contain;
-}
+      /* Second quote image specific style */
+      .desktop-quote-image-second {
+        padding-bottom: 35%;
+        width: 100%;
+        object-fit: contain;
+      }
 
       .mob-quote-section {
-        display:none !important;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: -webkit-fill-available;
-  position: relative;
-  padding-left: 5%;
-  padding-right: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
+        display: none !important;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: -webkit-fill-available;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
 
-/* Heading Styles */
-.mob-legendary-quotes {
-  position: relative;
-  left: -1%;
-  bottom: auto;
-  text-align: center;
-  margin-bottom: 5%;
-}
+      /* Heading Styles */
+      .mob-legendary-quotes {
+        position: relative;
+        left: -1%;
+        bottom: auto;
+        text-align: center;
+        margin-bottom: 5%;
+      }
 
-/* Quote Container */
-.mob-quote-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 8%;
-}
+      /* Quote Container */
+      .mob-quote-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8%;
+      }
 
-/* Last Quote Container (no bottom margin) */
-.mob-quote-container-last {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      /* Last Quote Container (no bottom margin) */
+      .mob-quote-container-last {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-/* Quote Block */
-.mob-quote-block {
-  margin-bottom: 5%;
-  text-align: center;
-  width: 60%;
-}
+      /* Quote Block */
+      .mob-quote-block {
+        margin-bottom: 5%;
+        text-align: center;
+        width: 60%;
+      }
 
-/* Quote Images */
-.mob-quote-image {
-  width: 40%;
-  object-fit: contain;
-}
+      /* Quote Images */
+      .mob-quote-image {
+        width: 40%;
+        object-fit: contain;
+      }
 
-.card-slider-container {
-      position: relative;
-      width: 100%;
-      /* height: 100%; */
-      min-height: 300px;
-      overflow: hidden;
-    }
-    
-    .card-slider {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      cursor: grab;
-      transition: transform 0.3s ease-out;
-    }
-    
-    .card-slider:active {
-      cursor: grabbing;
-    }
-    
-    .card-slide {
-      position: relative;
-      min-width: 300px;
-      padding-top:30px;
-      /* height: 85%; */
-      margin: 0 15px;
-      /* border-radius: 15px; */
-      overflow: hidden;
-      transition: all 0.5s ease;
-      transform-origin: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .card-slide img {
-      width: 100%;
-      /* height: 100%; */
-      object-fit: cover;
-    }
-    
-    .card-slide::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      /* background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.2) 100%); */
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: 1;
-    }
-    
-    .card-slide:not(.card-active) {
-      transform: scale(0.8);
-      filter: blur(3px);
-    }
-    
-    .card-slide:not(.card-active)::before {
-      opacity: 1;
-    }
-    
-    .card-slide.card-active {
-      transform: scale(1.1);
-      z-index: 2;
-      /* box-shadow: 0 10px 30px rgba(0,0,0,0.2); */
-    }
-    
-    .card-slider-nav {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-    
-    .card-slider-nav-item {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--color-crimson);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .card-slider-nav-item.card-active {
-      background-color: var(--color-crimson);
-      width: 30px;
-      border-radius: 5px;
-    }
+      .card-slider-container {
+        position: relative;
+        width: 100%;
+        /* height: 100%; */
+        min-height: 300px;
+        overflow: hidden;
+      }
 
-    .subscribe-btn {
+      .card-slider {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        cursor: grab;
+        transition: transform 0.3s ease-out;
+      }
+
+      .card-slider:active {
+        cursor: grabbing;
+      }
+
+      .card-slide {
+        position: relative;
+        min-width: 300px;
+        padding-top: 30px;
+        /* height: 85%; */
+        margin: 0 15px;
+        /* border-radius: 15px; */
+        overflow: hidden;
+        transition: all 0.5s ease;
+        transform-origin: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-slide img {
+        width: 100%;
+        /* height: 100%; */
+        object-fit: cover;
+      }
+
+      .card-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.2) 100%); */
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 1;
+      }
+
+      .card-slide:not(.card-active) {
+        transform: scale(0.8);
+        filter: blur(3px);
+      }
+
+      .card-slide:not(.card-active)::before {
+        opacity: 1;
+      }
+
+      .card-slide.card-active {
+        transform: scale(1.1);
+        z-index: 2;
+        /* box-shadow: 0 10px 30px rgba(0,0,0,0.2); */
+      }
+
+      .card-slider-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .card-slider-nav-item {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--color-crimson);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .card-slider-nav-item.card-active {
+        background-color: var(--color-crimson);
+        width: 30px;
+        border-radius: 5px;
+      }
+
+      .subscribe-btn {
         background-color: var(--color-crimson);
         border-radius: var(--br-11xl);
         /* width: 50%; */
@@ -728,10 +729,10 @@
         padding-left: 5%;
         padding-right: 5%;
         cursor: pointer;
-        width:55%;
-    }
+        width: 55%;
+      }
 
-    .join-yt {
+      .join-yt {
         color: #0e0606;
         font-size: 44px;
         line-height: 2.188rem;
@@ -744,31 +745,140 @@
         color: var(--paragraph);
       }
 
-    .subscribe-text {
+      .subscribe-text {
         font-family: var(--font-be-vietnam-pro);
         font-size: 18px;
         font-weight: 300;
         color: white;
         text-align: center;
-    }
+      }
 
-    .white-candles {
+      .white-candles {
         object-fit: contain;
-    }
+      }
 
-    .card-slide-sec {
-        width:-webkit-fill-available; 
-        margin:5%; 
-        display:flex; 
-        flex-direction:row; 
+      .card-slide-sec {
+        width: -webkit-fill-available;
+        margin: 5%;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
+      }
+
+      .left-div {
+        width: 27%;
+        display: flex;
+        flex-direction: column;
+      }
+      .right-div {
+        width: 70%;
+      }
+
+      .gallery-wrapper {
+      position: relative;
+      padding-top: 10%;
+      width: 100%;
+      height: 100%;
+      /* min-height: 300px; */
+      overflow: hidden;
+    }
+    
+    .gallery-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      cursor: grab;
+      transition: transform 0.3s ease-out;
+    }
+    
+    .gallery-track:active {
+      cursor: grabbing;
+    }
+    
+    .gallery-item {
+      position: relative;
+      min-width: 280px;
+      height: 85%;
+      margin: 0 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .gallery-controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .gallery-counter {
+      font-family: var(--font-be-vietnam-pro);
+      font-size: 16px;
+      color: var(--paragraph);
+      line-height: 156%;
+      letter-spacing: 0.5rem;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .gallery-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #DEB6B6;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .gallery-dot.is-active {
+      background-color: var(--color-crimson, #DC143C);
+      width: 30px;
+      border-radius: 5px;
     }
 
-    .left-div {
-        width:27%; display: flex; flex-direction: column;
+    .ai-sec {
+        width: -webkit-fill-available;
+          display: flex;
+          flex-direction: row;
+          padding: 5%;
+          gap:2%;
+          align-items: flex-end;
+          background-color: var(--color-lightpink);
     }
-    .right-div {
-        width:70%;
+
+    .ai-first-div {
+        width: 28%; display: flex; flex-direction: column;
+    }
+
+    .ai-img {
+        flex: 1; display:flex; align-items:flex-end;
+    }
+
+    .ai-second-div {
+        width: 67%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ai-heading-text {
+        flex: 1; display:flex; justify-content:flex-end;
+    }
+
+    .ai-heading-text-inner {
+        color:#0e0606; 
+        width:70%; 
+        text-align: right; 
+        margin-bottom: 10%; 
+        font-weight:500;
     }
 
       @keyframes fade {
@@ -780,20 +890,18 @@
         }
       }
 
-      
-
       @media screen and (max-width: 768px) {
         .subscribe-text {
-            font-size:12px;
+          font-size: 12px;
         }
 
         .join-yt {
-            font-size: 30px;
-            margin-bottom:16px !important;
+          font-size: 30px;
+          margin-bottom: 16px !important;
         }
         .para-text {
-            font-size: 12px;
-            margin-bottom:25px !important;
+          font-size: 12px;
+          margin-bottom: 25px !important;
         }
         .section-1 {
           padding-top: 25%;
@@ -875,10 +983,10 @@
         }
 
         .desktop-quote-section {
-            display: none;
+          display: none;
         }
         .mob-quote-section {
-            display: inherit !important;
+          display: inherit !important;
         }
       }
       @media screen and (max-width: 497px) {
@@ -909,13 +1017,13 @@
           font-size: 12px;
         }
         .card-slide-sec {
-            flex-direction: column;
+          flex-direction: column;
         }
         .left-div {
-            width: 80%;
+          width: 80%;
         }
         .right-div {
-            width: 90%;
+          width: 90%;
         }
       }
       @media screen and (max-width: 350px) {
@@ -977,13 +1085,47 @@
           width: 25%;
         }
         .legendary-quotes {
-            font-size: 50px;
+          font-size: 50px;
+        }
+        .ai-sec {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .ai-first-div {
+            width: 80%;
+            flex-direction: row;
+        }
+        .ai-second-div {
+            margin-top: 50px;
+            width: 80%;
+        }
+        .ai-heading-text {
+            justify-content: flex-start;
+        }
+        .ai-heading-text-inner {
+            text-align: left;
+            margin-bottom: 5%;
+            font-size: 30px;
+        }
+        .gallery-controls {
+            right: auto;
+            left: 20px;
+        }
+        .gallery-wrapper {
+            padding-top: 18%;
+        }
+        #online {
+            width: 80%;
+        }
+        #ai {
+            width: 80%;
         }
       }
 
       @media screen and (max-width: 1017px) {
         .legendary-quotes {
-            font-size: 35px;
+          font-size: 35px;
         }
       }
       @media screen and (max-width: 1180px) {
@@ -1005,6 +1147,9 @@
         }
         .redTxt {
           font-size: var(--font-size-sm);
+        }
+        .gallery-wrapper {
+            padding-top: 25%;
         }
       }
     </style>
@@ -1682,110 +1827,164 @@
 
       <section class="card-slide-sec">
         <div class="left-div">
-            <div class="join-yt" style="margin-bottom: 24px;">Join Our Youtube Channel</div>
-            <div class="para-text" style="margin-bottom: 40px;">Transform Your Talent Into a Career with Our Artist Development Program</div>
-            
-            <div class="subscribe-btn">
-                <img
-                  loading="lazy"
-                  class="white-candles"
-                  src="./public/white-candle.png"
-                />
-                <span class="subscribe-text">Subscribe Channel</span>
-            </div>
+          <div class="join-yt" style="margin-bottom: 24px">
+            Join Our Youtube Channel
+          </div>
+          <div class="para-text" style="margin-bottom: 40px">
+            Transform Your Talent Into a Career with Our Artist Development
+            Program
+          </div>
+
+          <div class="subscribe-btn">
+            <img
+              loading="lazy"
+              class="white-candles"
+              src="./public/white-candle.png"
+            />
+            <span class="subscribe-text">Subscribe Channel</span>
+          </div>
         </div>
 
         <div class="right-div">
-            <div class="card-slider-container">
-                <div class="card-slider">
-                  <div class="card-slide">
-                    <img src="./public/home/slide1.svg" alt="Image 1" style="object-fit: contain;">
-                  </div>
-                  <div class="card-slide">
-                    <img src="./public/home/slide2.svg" alt="Image 2" style="object-fit: contain;">
-                  </div>
-                  <div class="card-slide">
-                    <img src="./public/home/slide1.svg" alt="Image 3" style="object-fit: contain;">
-                  </div>
-                  <div class="card-slide">
-                    <img src="./public/home/slide2.svg" alt="Image 3" style="object-fit: contain;">
-                  </div>
-                </div>
-                <div class="card-slider-nav">
-                  <div class="card-slider-nav-item"></div>
-                  <div class="card-slider-nav-item"></div>
-                  <div class="card-slider-nav-item"></div>
-                  <div class="card-slider-nav-item"></div>
-                </div>
+          <div class="card-slider-container">
+            <div class="card-slider">
+              <div class="card-slide">
+                <img
+                  src="./public/home/slide1.svg"
+                  alt="Image 1"
+                  style="object-fit: contain"
+                />
               </div>
+              <div class="card-slide">
+                <img
+                  src="./public/home/slide2.svg"
+                  alt="Image 2"
+                  style="object-fit: contain"
+                />
+              </div>
+              <div class="card-slide">
+                <img
+                  src="./public/home/slide1.svg"
+                  alt="Image 3"
+                  style="object-fit: contain"
+                />
+              </div>
+              <div class="card-slide">
+                <img
+                  src="./public/home/slide2.svg"
+                  alt="Image 3"
+                  style="object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="card-slider-nav">
+              <div class="card-slider-nav-item"></div>
+              <div class="card-slider-nav-item"></div>
+              <div class="card-slider-nav-item"></div>
+              <div class="card-slider-nav-item"></div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="desktop-quote-section">
         <!-- First Div (20% width) - Quote first, then Image -->
         <div class="desktop-quote-col-small">
-          <div class="desktop-quote-container-first"> 
-            <div class="quote-text">"Where words fail, music speaks"</div> 
-            <div class="quote-name">- Hans Christian Andersen</div> 
+          <div class="desktop-quote-container-first">
+            <div class="quote-text">"Where words fail, music speaks"</div>
+            <div class="quote-name">- Hans Christian Andersen</div>
           </div>
-          <img src="./public/home/quote-img1.svg" class="desktop-quote-image" alt="Music quote illustration 1">
+          <img
+            src="./public/home/quote-img1.svg"
+            class="desktop-quote-image"
+            alt="Music quote illustration 1"
+          />
         </div>
-        
+
         <!-- Second Div (20% width) - Image first, then Quote -->
         <div class="desktop-quote-col-small">
-          <img src="./public/home/quote-img2.svg" class="desktop-quote-image-second" alt="Music quote illustration 2">
-          <div> 
-            <div class="quote-text">"Music is the universal language of mankind"</div> 
-            <div class="quote-name">- Henry Wadsworth Longfellow</div> 
+          <img
+            src="./public/home/quote-img2.svg"
+            class="desktop-quote-image-second"
+            alt="Music quote illustration 2"
+          />
+          <div>
+            <div class="quote-text">
+              "Music is the universal language of mankind"
+            </div>
+            <div class="quote-name">- Henry Wadsworth Longfellow</div>
           </div>
         </div>
-        
+
         <!-- Third Div (40% width) - Quote first, then Image with padding top -->
         <div class="desktop-quote-col-large">
-          <div class="desktop-quote-container-third"> 
-            <div class="quote-text">"Music expresses that which cannot be put into words and that which cannot remain silent"</div> 
-            <div class="quote-name">- Hans Christian Andersen</div> 
+          <div class="desktop-quote-container-third">
+            <div class="quote-text">
+              "Music expresses that which cannot be put into words and that
+              which cannot remain silent"
+            </div>
+            <div class="quote-name">- Hans Christian Andersen</div>
           </div>
-          <img src="./public/home/quote-img3.svg" class="desktop-quote-image" alt="Music quote illustration 3">
+          <img
+            src="./public/home/quote-img3.svg"
+            class="desktop-quote-image"
+            alt="Music quote illustration 3"
+          />
         </div>
-      
+
         <div class="legendary-quotes">Legendary Quotes</div>
       </section>
 
-      
-
       <section class="mob-quote-section">
         <!-- Heading at the top -->
-        <div class="legendary-quotes mob-legendary-quotes">Legendary Quotes</div>
-        
+        <div class="legendary-quotes mob-legendary-quotes">
+          Legendary Quotes
+        </div>
+
         <!-- First Quote and Image -->
         <div class="mob-quote-container">
-          <div class="mob-quote-block"> 
-            <div class="quote-text">"Where words fail, music speaks"</div> 
-            <div class="quote-name">- Hans Christian Andersen</div> 
+          <div class="mob-quote-block">
+            <div class="quote-text">"Where words fail, music speaks"</div>
+            <div class="quote-name">- Hans Christian Andersen</div>
           </div>
-          <img src="./public/home/quote-img1.svg" class="mob-quote-image" alt="Music quote illustration 1">
+          <img
+            src="./public/home/quote-img1.svg"
+            class="mob-quote-image"
+            alt="Music quote illustration 1"
+          />
         </div>
-        
+
         <!-- Second Quote and Image -->
         <div class="mob-quote-container">
-          <div class="mob-quote-block"> 
-            <div class="quote-text">"Music is the universal language of mankind"</div> 
-            <div class="quote-name">- Henry Wadsworth Longfellow</div> 
+          <div class="mob-quote-block">
+            <div class="quote-text">
+              "Music is the universal language of mankind"
+            </div>
+            <div class="quote-name">- Henry Wadsworth Longfellow</div>
           </div>
-          <img src="./public/home/quote-img2.svg" class="mob-quote-image" alt="Music quote illustration 2">
+          <img
+            src="./public/home/quote-img2.svg"
+            class="mob-quote-image"
+            alt="Music quote illustration 2"
+          />
         </div>
-        
+
         <!-- Third Quote and Image -->
         <div class="mob-quote-container-last">
-          <div class="mob-quote-block"> 
-            <div class="quote-text">"Music expresses that which cannot be put into words and that which cannot remain silent"</div> 
-            <div class="quote-name">- Hans Christian Andersen</div> 
+          <div class="mob-quote-block">
+            <div class="quote-text">
+              "Music expresses that which cannot be put into words and that
+              which cannot remain silent"
+            </div>
+            <div class="quote-name">- Hans Christian Andersen</div>
           </div>
-          <img src="./public/home/quote-img3.svg" class="mob-quote-image" alt="Music quote illustration 3">
+          <img
+            src="./public/home/quote-img3.svg"
+            class="mob-quote-image"
+            alt="Music quote illustration 3"
+          />
         </div>
       </section>
-
 
       <section class="graph-sec">
         <div
@@ -1832,6 +2031,65 @@
           </div>
 
           <img class="graph-img" alt="graph" src="./public/home/graph.svg" />
+        </div>
+      </section>
+
+      <section
+        class="ai-sec"
+      >
+        <div class="ai-first-div">
+          <div style="flex: 1">
+            <img
+            id="online"
+              style="object-fit: contain;"
+              alt="circle"
+              loading="lazy"
+              src="./public/home/online-circle.svg"
+            />
+          </div>
+          <div class="ai-img">
+            <img
+            id="ai"
+              style="object-fit: contain;"
+              alt="circle"
+              loading="lazy"
+              src="./public/home/ai-img.svg"
+            />
+          </div>
+        </div>
+        <div
+          class="ai-second-div"
+        >
+          <div class="ai-heading-text">
+            <div class='heading ai-heading-text-inner'>
+                From Teaching to Producing Records!
+            </div>
+          </div>
+          <div style="flex: 1;">
+            <div class="gallery-wrapper">
+                <div class="gallery-controls">
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-counter">DRAG - 1/4</div>
+                </div>
+                <div class="gallery-track">
+                  <div class="gallery-item">
+                    <img src="./public/home/personalized-mentor.svg" alt="Image 1" style="object-fit: contain;">
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./public/home/mon-to-fri.svg" alt="Image 2" style="object-fit: contain;">
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./public/home/personalized-mentor.svg" alt="Image 3" style="object-fit: contain;">
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./public/home/mon-to-fri.svg" alt="Image 2" style="object-fit: contain;">
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </section>
 
@@ -1985,5 +2243,6 @@
     </div>
     <script src="./javascript/carousel.js" defer></script>
     <script src="./javascript/horizontalSlider.js" defer></script>
+    <script src="./javascript/horizontalSlider2.js" defer></script>
   </body>
 </html>
