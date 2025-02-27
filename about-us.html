@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./product.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap"
+    />
+    <script src="./javascript/artistic.js" defer></script>
+    <style>
+      .familiar-sec {
+        background-image: url("./public/aboutus/about-us-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: -webkit-fill-available;
+        padding: 5%;
+        padding-top: 10%;
+        position: relative;
+      }
+      .heading {
+        font-family: var(--font-bricolage-grotesque);
+        color: #0e0606;
+        font-size: 68px;
+        font-weight: 700;
+      }
+      .paragraph-text {
+        color: var(--paragraph);
+        font-size: 16px;
+        font-family: var(--font-be-vietnam-pro);
+        text-align: left;
+      }
+      .paragraph-extra {
+        position: absolute;
+        right: 5%;
+        top: 40%;
+        width: 400px;
+      }
+
+      .video-circle {
+        position: absolute;
+        cursor: pointer;
+      }
+      .section-2 {
+        position: relative;
+        background-image: url("./public/home/section1-lines.svg");
+        background-size: 100% auto;
+        overflow-x: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 5%;
+      }
+      .mid-paragraph {
+        font-family: var(--font-be-vietnam-pro);
+        color: #0e0606;
+        font-size: 32px;
+        width: 50%;
+      }
+      .ps2-extra {
+        padding: 10%;
+        padding-bottom: 5%;
+        padding-top: 3%;
+        width: 50%;
+      }
+      .may2024 {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        padding-top: 5%;
+      }
+
+      .color-extra {
+        color: #0e0606;
+      }
+
+      .may-extra {
+        color: var(--color-crimson);
+      }
+      .arrowbtn {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-xs);
+        align-items: center;
+      }
+      .first-div {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 50px;
+      }
+
+      .second-div {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -3rem;
+        padding: 20px;
+        gap: 50px;
+      }
+      .third-div {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+        top: 5rem;
+      }
+      #img1 {
+        object-fit: contain;
+      }
+      #img2 {
+        object-fit: contain;
+      }
+      #img3 {
+        object-fit: contain;
+      }
+      .hero {
+        background-color: var(--color-white);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-77xl) 0rem;
+        padding-top: 0;
+        box-sizing: border-box;
+        gap: var(--gap-29xl);
+        min-width: 100%;
+        text-align: center;
+        font-size: var(--font-size-25xl);
+        color: var(--heading);
+        font-family: var(--font-bricolage-grotesque);
+      }
+      .collective-resources {
+        color: #0e0606;
+        font-size: var(--font-size-16xl);
+        line-height: 2.188rem;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      .logoSliderParent {
+        white-space: nowrap;
+      }
+
+      .logoSlider {
+        display: inline-block;
+        overflow: hidden;
+        animation: 15s slide infinite linear;
+      }
+
+      .logoSlider img {
+        object-fit: contain;
+        width: 10%;
+        height: auto;
+      }
+
+      .mixer {
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-direction: column;
+      }
+      .margin-left {
+        margin-left: 5%;
+      }
+      .covered-extra {
+        justify-content: space-between;
+        margin-right: 5%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+      }
+      .subtitle {
+        line-height: "156%";
+        font-size: var(--font-size-lg);
+        color: var(--paragraph);
+        text-align: center;
+        margin-top: 3%;
+      }
+      .headingText {
+        font-size: var(--font-size-35xl);
+        color: var(--heading);
+        margin: 0;
+      }
+      .heading-extra {
+        font-weight: 700;
+        width: 80%;
+      }
+      .checklist {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+      }
+      .checks {
+        display: flex;
+        flex-direction: column;
+      }
+      .paragraph-extra2 {
+        width: 90%;
+      }
+      .checkline {
+        display: flex;
+        flex-direction: row;
+        margin-top: 6%;
+        gap: var(--gap-xs);
+      }
+      .enrollbtn {
+        background-color: var(--color-gold-100);
+        padding: var(--padding-mid) var(--padding-13xl);
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--br-11xl);
+        gap: var(--gap-xs);
+        width: 150px;
+        margin-top: 5%;
+      }
+
+      .section-3 {
+        margin: 5%;
+        margin-top: 0;
+        width: -webkit-fill-available;
+        position: relative;
+      }
+      .sec3-outer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        width: 90%;
+        justify-self: center;
+      }
+
+      .combined-img {
+        object-fit: contain;
+        width: 50%;
+      }
+      .sec3-mentor {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .yellow-candles {
+        width: 20%;
+      }
+
+      .mid-heading-extra {
+        font-size: 44px;
+      }
+
+      .ps3-extra {
+        width: 70%;
+      }
+
+      .section-4 {
+        background-image: url("./public/home/sec2-bg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: center; */
+        width: -webkit-fill-available;
+        /* height: 100vh; */
+      }
+
+      .sec4-outer {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sec4-title {
+        color: var(--color-white);
+        width: 52%;
+        text-align: center;
+      }
+      .story {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 5%;
+        padding-top: 4%;
+      }
+      .story-img {
+        object-fit: contain;
+        width: 65%;
+        backdrop-filter: blur(10px);
+        border-radius: 3%;
+      }
+      .instrument2 {
+        object-fit: contain;
+        width: 30%;
+      }
+      .inst3 {
+        object-fit: contain;
+        width: 30%;
+        border-radius: 3%;
+        backdrop-filter: blur(10px);
+      }
+      /* Extra large screen size */
+      @media screen and (max-width: 1200px) {
+        .story-img {
+          /* width: 600px; */
+        }
+        .familiar-sec {
+          padding-top: 13%;
+        }
+        .heading {
+          font-size: 60px;
+        }
+        .mid-paragraph {
+          font-size: 28px;
+        }
+        .paragraph-extra2 {
+          width: 90%;
+          margin-bottom: 4%;
+        }
+        .yellow-candles {
+          width: 15%;
+        }
+        .mid-heading-extra {
+          font-size: 38px;
+        }
+        .ps3-extra {
+          width: 100%;
+        }
+      }
+
+      /* Large Screens */
+      @media screen and (max-width: 992px) {
+        .familiar-sec {
+          padding-top: 18%;
+        }
+        .heading {
+          font-size: 60px;
+        }
+        .paragraph-text {
+          font-size: 14px;
+        }
+        .paragraph-extra {
+          position: inherit;
+        }
+        .video-circle {
+          width: 60px;
+        }
+        .mid-paragraph {
+          font-size: 24px;
+        }
+        .mid-heading-extra {
+          font-size: 32px;
+        }
+      }
+
+      @media screen and (max-width: 833px) {
+        .first-div {
+          position: inherit;
+          width: 40%;
+          gap: 40px;
+        }
+        #img1 {
+          width: 90%;
+        }
+        #img2 {
+          width: 90%;
+        }
+        #img3 {
+          width: 90%;
+        }
+        .second-div {
+          position: inherit;
+          width: 40%;
+          gap: 40px;
+        }
+        .third-div {
+          position: inherit;
+          width: 90%;
+        }
+        .instrument {
+          width: 50%;
+        }
+        .combined-img {
+          width: 70%;
+        }
+        .sec3-outer {
+          gap: 2rem;
+          flex-direction: column-reverse;
+        }
+        .sec4-title {
+          width: 80%;
+        }
+      }
+
+      /* Small Screens */
+      @media screen and (max-width: 768px) {
+        .familiar-sec {
+          padding-top: 23%;
+        }
+        .paragraph-text {
+          font-size: 12px;
+        }
+        .paragraph-extra {
+          width: 300px;
+        }
+        .heading {
+          font-size: 48px;
+        }
+        .video-circle {
+          width: 50px;
+        }
+        .mid-paragraph {
+          font-size: 20px;
+        }
+        .subtitle {
+          font-size: var(--font-size-base);
+          margin-top: 2%;
+        }
+        .headingText {
+          font-size: var(--font-size-16xl);
+        }
+        .enrollbtn {
+          width: 120px;
+        }
+        .mid-heading-extra {
+          font-size: 28px;
+        }
+        .sec4-title {
+          width: 90%;
+        }
+        .story {
+          flex-direction: column;
+        }
+        .story-img {
+          width: 90%;
+        }
+        .instrument2 {
+          display: none;
+        }
+        #instrument3 {
+          display: none;
+        }
+        .inst3 {
+          width: 40%;
+        }
+        .story-extra {
+          flex-direction: row;
+        }
+      }
+
+      /* Small Screens */
+      @media screen and (max-width: 576px) {
+        .familiar-sec {
+          padding-top: 30%;
+        }
+        .paragraph-text {
+          font-size: 10px;
+        }
+        .heading {
+          font-size: 32px;
+        }
+        .video-circle {
+          width: 40px;
+        }
+        .mid-paragraph {
+          font-size: 18px;
+        }
+        .checklist {
+          flex-wrap: wrap;
+        }
+        .redTxt {
+          font-size: var(--font-size-sm);
+        }
+        .mid-heading-extra {
+          font-size: 24px;
+        }
+      }
+
+      @media screen and (max-width: 494px) {
+        .first-div {
+          width: 80%;
+          gap: 30px;
+        }
+        .second-div {
+          width: 80%;
+          gap: 30px;
+        }
+        .third-div {
+          width: 90%;
+        }
+        .subtitle {
+          font-size: var(--font-size-sm);
+        }
+        .headingText {
+          font-size: var(--font-size-7xl);
+        }
+        .enrollbtn {
+          width: 110px;
+          padding: var(--padding-xs) var(--padding-xl);
+        }
+        .instrument {
+          width: 80%;
+          margin-top: 5%;
+        }
+        .covered-extra {
+          justify-content: left;
+          flex-direction: column;
+        }
+      }
+      /* Extra Small Screens */
+      @media screen and (max-width: 370px) {
+        .heading {
+          font-size: 24px;
+        }
+        .paragraph-extra {
+          width: 150px;
+        }
+        .headingText {
+          font-size: var(--font-size-lgi);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-page">
+      <header class="image-520-parent" id="header">
+        <img
+          class="image-520-icon"
+          loading="lazy"
+          alt=""
+          src="./public/image-520@2x.png"
+        />
+
+        <div class="program-list">
+          <div class="courses-wrapper">
+            <a
+              href="index.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Courses</div></a
+            >
+          </div>
+          <div class="courses-wrapper">
+            <a
+              href="product.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Product</div></a
+            >
+          </div>
+          <div class="courses-wrapper">
+            <div class="home">Service</div>
+          </div>
+          <div class="courses-wrapper">
+            <a
+              href="artisticDevelopmentProgram.html"
+              style="text-decoration: none; color: inherit; text-align: center"
+              ><div class="home">Artistic Development Program</div></a
+            >
+          </div>
+        </div>
+
+        <div class="hamburger" style="color: #0e0606; font-size: 25px">
+          &#9776;
+        </div>
+      </header>
+
+      <section class="familiar-sec">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <img
+            style="object-fit: contain; width: 10%"
+            src="./public/aboutus/logo.svg"
+            loading="eager"
+            alt="logo"
+          />
+
+          <div class="familiar">
+            <div class="heading">Let's Get</div>
+            <div class="heading">Familiar to Each Other</div>
+          </div>
+
+          <div class="paragraph-text paragraph-extra">
+            SMST, the School of Musical Science and Technology, is an exciting
+            project led by Sudhanshu (aka Ony) focused on advancing Indian
+            electronic music production.
+          </div>
+        </div>
+      </section>
+
+      <section
+        style="
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          background-image: url('./public/aboutus/unsplash.svg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img
+          src="./public/video-circle.svg"
+          alt="Video Circle"
+          class="video-circle"
+        />
+      </section>
+
+      <section class="section-2">
+        <div class="mid-paragraph">
+          It began with a small group of passionate friends and community
+          members who wanted to create a space where music technology and
+          production could be explored in depth.
+        </div>
+
+        <div class="paragraph-text ps2-extra">
+          At SMST, we're dedicated to fostering a vibrant learning environment
+          where students and mentors can grow together. We believe in empowering
+          our students to explore their musical potential and push the
+          boundaries of what they can achieve.
+        </div>
+
+        <div class="may2024">
+          <!-- First Div (20% width) -->
+          <div class="first-div">
+            <img
+              id="img1"
+              alt="img1"
+              loading="eager"
+              src="./public/aboutus/img1.svg"
+            />
+            <div class="paragraph-text color-extra">
+              Music is the universal language of mankind
+            </div>
+          </div>
+
+          <!-- Second Div (20% width) -->
+          <div class="second-div">
+            <img
+              id="img2"
+              alt="img2"
+              loading="eager"
+              src="./public/aboutus/img2.svg"
+            />
+
+            <div class="heading may-extra">May 2024</div>
+
+            <div class="arrowbtn">
+              <div class="paragraph-text color-extra">Drag to See</div>
+              <img
+                src="./public/aboutus/arrow.svg"
+                alt="arrow"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Third Div (40% width) -->
+          <div class="third-div">
+            <img
+              id="img3"
+              alt="img3"
+              loading="eager"
+              src="./public/aboutus/img3.svg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-3">
+        <div class="sec3-outer">
+          <img
+            class="combined-img"
+            loading="eager"
+            alt="mentors"
+            src="./public/aboutus/combined.svg"
+          />
+
+          <div class="sec3-mentor">
+            <img
+              src="./public/aboutus/yellow-candles.svg"
+              alt="logo"
+              class="yellow-candles"
+              style="object-fit: contain"
+            />
+            <div class="heading mid-heading-extra">Shudhansu Kumar</div>
+            <div class="paragraph-text ps3-extra">
+              In the field of music production, Sudhanshu, also known as Mini
+              Onion or Ony, is an enthusiastic mentor and teacher. He is a total
+              Ableton nerd who loves audio programming and sound design because
+              they combine technical skill with artistic expression.
+              </br></br> 
+              When Sudhanshu established a deep connection with the technical
+              components of music, that's when his adventure started. Motivated
+              by musicians such as LeKtriQue, Haterade, and Erosin Music, he
+              immersed himself in the realm of music production, both technique
+              and science. His proficiency with Ableton Live enables him to
+              create intricate, dynamic compositions out of straightforward
+              tunes. 
+              </br></br>
+              As a mentor, Sudhanshu is dedicated to imparting to young
+              producers and musicians his expertise and love of sound
+              exploration. His method of instruction empowers students by fusing
+              technical expertise with creative inquiry.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-4">
+        <div class="sec4-outer">
+          <div class="heading sec4-title mid-heading-extra">
+            Music Production is an Art. Art of Emotions and Feelings
+          </div>
+
+          <div class="story">
+            <img
+              alt="our story"
+              src="./public/aboutus/story-card.svg"
+              loading="eager"
+              class="story-img"
+            />
+            <img
+              alt="instrument"
+              src="./public/aboutus/instrument2.svg"
+              loading="eager"
+              class="instrument2"
+            />
+          </div>
+
+          <div class="story story-extra">
+            <img
+              id="instrument3"
+              alt="instrument"
+              src="./public/aboutus/instrument3.svg"
+              loading="eager"
+              class="inst3"
+            />
+            <img
+              alt="mission"
+              src="./public/aboutus/mission-card.svg"
+              loading="eager"
+              class="inst3"
+            />
+            <img
+              alt="vision"
+              src="./public/aboutus/vision-card.svg"
+              loading="eager"
+              class="inst3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="hero">
+        <div style="align-self: center">
+          <div class="heading mid-heading-extra" style="margin-top: 10%">
+            Collective Resources
+          </div>
+        </div>
+        <div>
+          <div
+            style="min-width: 100%; overflow-x: hidden"
+            class="logoSliderParent"
+          >
+            <div class="logoSlider">
+              <div style="display: flex; justify-content: space-between">
+                <img
+                  src="./public/image-509@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-511@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-507@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-508@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-522@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-523@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding-left: 5%;
+                "
+              >
+                <img
+                  src="./public/image-509@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-511@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-507@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-508@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-522@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-523@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            style="min-width: 100%; overflow-x: hidden"
+            class="logoSliderParent"
+          >
+            <div class="logoSlider">
+              <div style="display: flex; justify-content: space-between">
+                <img
+                  src="./public/image-512@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-514@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-513@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-515@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-516@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-524@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+            <div class="logoSlider">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding-left: 5%;
+                "
+              >
+                <img
+                  src="./public/image-512@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-514@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-513@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-515@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-516@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+                <img
+                  src="./public/image-524@2x.png"
+                  alt="company logo"
+                  style="object-fit: contain; width: 10%; height: auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mixer" style="padding-top: 0">
+        <div class="margin-left covered-extra">
+          <div>
+            <div
+              class="subtitle redTxt"
+              style="
+                margin-top: 5%;
+                margin-bottom: 1%;
+                color: #ff444e;
+                width: 40%;
+                text-align: left;
+              "
+            >
+              Have Inquiry?
+            </div>
+            <div class="headingText heading-extra">Contact Us</div>
+
+            <div class="checklist" style="margin-top: 2%">
+              <div class="checks">
+                <div class="paragraph-text paragraph-extra2">
+                  Send us your query and we’ll get back to you in 24 hours.
+                </div>
+                <div class="checkline enrollbtn" style="margin-top: 2%">
+                  <img
+                    style="object-fit: contain"
+                    alt="logo"
+                    src="./public/small-candles.png"
+                    loading="lazy"
+                  />
+                  <div
+                    class="subtitle redTxt"
+                    style="
+                      font-family: var(--font-be-vietnam-pro);
+                      font-weight: 500;
+                      color: #0e0606;
+                    "
+                  >
+                    Contact Us
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            class="instrument"
+            loading="eager"
+            alt="instrument"
+            style="object-fit: contain"
+            src="./public/home/instrument.svg"
+          />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="frame-parent36" style="padding-left: 5%; padding-right: 5%">
+          <div class="join-our-newsletter-parent">
+            <div class="join-our-newsletter">Join our Newsletter</div>
+            <div class="placeholder">
+              <div class="want-to-create">Email Address</div>
+              <div class="placeholder1">
+                <div class="vuesaxlineararrow-down-icon">
+                  <div class="message-light-child"></div>
+                  <img
+                    class="message-light-item"
+                    alt=""
+                    src="./public/vector-3.svg"
+                  />
+                </div>
+                <input
+                  class="someoneexamplecom"
+                  placeholder="someone@example.com"
+                  type="text"
+                />
+              </div>
+            </div>
+            <button class="button">
+              <div class="subscribe-newsletter">Subscribe Newsletter</div>
+            </button>
+          </div>
+          <div class="frame-parent37">
+            <div class="frame-parent38">
+              <div class="links-wrapper">
+                <div class="links">LINKS</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">Courses</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Products</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Services</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">
+                    <p class="join-now-and">Artists Development</p>
+                    <p class="join-now-and">Program</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent38">
+              <div class="links-wrapper">
+                <div class="links">ABOUT</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">About Us</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Contact</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Privacy Policy</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">Terms & Conditions</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-parent42">
+              <div class="company-wrapper">
+                <div class="company">COMPANY</div>
+              </div>
+              <div class="frame-parent39">
+                <div class="links-wrapper">
+                  <div class="products">9810745330</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">contact@smst.com</div>
+                </div>
+                <div class="links-wrapper">
+                  <div class="products">New Delhi, India</div>
+                </div>
+                <div class="social">
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/facebook.svg"
+                  />
+
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/twitter.svg"
+                  />
+
+                  <img
+                    class="youtube-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/youtube@2x.png"
+                  />
+
+                  <img
+                    class="facebook-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/instagram.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            padding-top: 5%;
+            width: 95%;
+            padding-left: 5%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            gap: 2%;
+          "
+        >
+          <img
+            style="width: 60%; max-width: 100%; height: auto"
+            loading="lazy"
+            alt=""
+            src="./public/delhi.png"
+          />
+          <img
+            style="width: 20%; height: auto"
+            loading="lazy"
+            alt=""
+            src="./public/footer-logo.png"
+          />
+        </div>
+
+        <div class="copyright">
+          <div class="copyrightText">Copyright © 2024 | Crafted by Locgfx</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
