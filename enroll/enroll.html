@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;500;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;500;600&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap"
+  />
+    <title>Responsive Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: radial-gradient(circle, #fff5f5, #fff);
+      }
+
+      .section {
+        display: flex; align-items: center; justify-content: center; width:30%;
+      }
+      .logo {
+        position: absolute;
+        top: 5vh;
+        width: 10%;
+        object-fit: contain;
+      }
+
+      .card {
+        background: white;
+        padding: 5%;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-bricolage-grotesque);
+      }
+
+      .required {
+        color: var(--color-crimson);
+      }
+
+      input {
+        /* width: 100%; */
+        padding: 0.8rem;
+        border: none;
+        border-bottom: 2px solid var(--color-pink);
+        font-size: 1rem;
+        outline: none;
+        background: transparent;
+        transition: all 0.3s ease;
+        color: var(--color-crimson);
+      }
+
+      input::placeholder {
+        opacity: 0.5;
+        color: gray;
+      }
+
+      input:focus {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+
+      input:not(:placeholder-shown)::placeholder {
+        opacity: 1;
+      }
+
+      .button {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-gold-100);
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-size: 18px;
+        transition: opacity 0.3s ease;
+        font-family: var(--font-bricolage-grotesque);
+        justify-self: flex-end;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .button.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .button:hover {
+        opacity: 0.8;
+      }
+
+      .button img {
+        
+        margin-left: 0.5rem;
+      }
+
+      @media screen and (max-width:992px) {
+        .section {
+          width: 50%;
+        }
+        .button {
+            font-size: 14px;
+            padding: 0.8rem 1.6rem;
+        }
+        label {
+            font-size: 14px;
+        }
+      }
+      @media (max-width: 768px) {
+
+        .logo {
+          width: 15%;
+        }
+        .button {
+            font-size: 12px;
+            padding: 0.6rem 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <img src="./assets/company-logo.svg" alt="Company Logo" class="logo" />
+
+      <div class="card">
+        <div class="input-group">
+          <label>What's Your Name? <span class="required">*</span></label>
+          <input type="text" placeholder="John Doe" oninput="toggleButton(this)" />
+        </div>
+        <div class="button" id="nextButton">
+          Next <img src="./assets/arrow-right.svg" alt="Arrow" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleButton(input) {
+        const button = document.getElementById('nextButton');
+        if (input.value.trim() !== '') {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      }
+    </script>
+  </body>
+</html>
