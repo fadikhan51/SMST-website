@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap"
+    />
+    <title>Responsive Form</title>
+    <style>
+      :root {
+        --color-crimson: #ff3b54;
+        --font-be-vietnam-pro: 'Be Vietnam Pro', sans-serif;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: radial-gradient(circle, #fff5f5, #fff);
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+      }
+
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+      }
+      
+      .logo {
+        position: absolute;
+        top: 5vh;
+        width: 10%;
+        object-fit: contain;
+      }
+
+      .card {
+        background: white;
+        padding: 5%;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-bricolage-grotesque);
+      }
+
+      .required {
+        color: var(--color-crimson);
+      }
+
+      input {
+        padding: 0.8rem;
+        border: none;
+        border-bottom: 2px solid var(--color-pink);
+        font-size: 16px;
+        outline: none;
+        background: transparent;
+        transition: all 0.3s ease;
+        color: var(--color-crimson);
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input::placeholder {
+        opacity: 0.5;
+        color: gray;
+      }
+
+      input:focus {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+
+      input:not(:placeholder-shown)::placeholder {
+        opacity: 1;
+      }
+
+      .login-button {
+        width: 100%;
+        background: var(--color-crimson);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        transition: opacity 0.3s ease;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .login-button:hover {
+        opacity: 0.9;
+      }
+
+      .center-button {
+        background: var(--color-crimson);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .center-button:hover {
+        opacity: 0.9;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        width: 400px;
+        max-height: 90vh;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+
+      .dialog-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: left;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .subtitle {
+        text-align: left;
+        margin-bottom: 30px;
+        color: #666;
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+      }
+
+      .subtitle a {
+        color: var(--color-crimson);
+        text-decoration: none;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      /* OTP specific styles */
+      .otp-message {
+        text-align: left;
+        margin-bottom: 30px;
+        color: #666;
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 16px;
+      }
+      
+      .resend-link {
+        color: var(--color-crimson);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .otp-divider {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+      
+      .otp-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+      }
+      
+      .otp-input {
+        width: 40px;
+        height: 45px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #0e0606;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        margin: 0 5px;
+      }
+      
+      /* Hide number input spinners for all browsers */
+      /* Chrome, Safari, Edge, Opera */
+      .otp-input::-webkit-outer-spin-button,
+      .otp-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      /* Firefox */
+      .otp-input[type=number] {
+        -moz-appearance: textfield;
+      }
+      
+      .otp-input:focus {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+      
+      .otp-input.active {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+      
+      .verify-button {
+        width: 100%;
+        background: var(--color-crimson);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        transition: opacity 0.3s ease;
+        font-family: var(--font-be-vietnam-pro);
+      }
+      
+      .verify-button:hover {
+        opacity: 0.9;
+      }
+
+      @media screen and (max-width: 992px) {
+        .section {
+          width: 50%;
+        }
+        .modal-content {
+          width: 80%;
+          max-width: 400px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .logo {
+          width: 15%;
+        }
+        .modal-content {
+          width: 90%;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <img src="./assets/company-logo.svg" alt="Company Logo" class="logo" />
+      <button id="openDialog" class="center-button">Open OTP Verification</button>
+    </section>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <div class="close" id="closeDialog">
+          <img src="./assets/close-circle.svg" alt="Close" />
+        </div>
+        
+        <h2 class="dialog-title">Enter OTP</h2>
+        <p class="otp-message">We've sent an OTP to 98*** **210. <span class="resend-link">Resend</span></p>
+        
+        <hr class="otp-divider">
+        
+        <form id="otpForm">
+          <div class="form-group">
+            <label for="otp">OTP</label>
+            <div class="otp-inputs">
+              <input type="number" class="otp-input active" min="0" max="9" maxlength="1" value="5">
+              <input type="number" class="otp-input" min="0" max="9" maxlength="1" value="1">
+              <input type="number" class="otp-input" min="0" max="9" maxlength="1">
+              <input type="number" class="otp-input" min="0" max="9" maxlength="1">
+              <input type="number" class="otp-input" min="0" max="9" maxlength="1">
+              <input type="number" class="otp-input" min="0" max="9" maxlength="1">
+            </div>
+          </div>
+          
+          <button type="submit" class="verify-button">Verify OTP</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      const modal = document.getElementById("loginModal");
+      
+      // Get the button that opens the modal
+      const btn = document.getElementById("openDialog");
+      
+      // Get the <span> element that closes the modal
+      const closeBtn = document.getElementById("closeDialog");
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "flex";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      
+      // Prevent form submission (for demo purposes)
+      document.getElementById("otpForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+      });
+      
+      // Handle OTP input
+      const otpInputs = document.querySelectorAll('.otp-input');
+      
+      otpInputs.forEach((input, index) => {
+        // Allow only digits 0-9
+        input.addEventListener('input', function() {
+          // Remove non-numeric characters
+          this.value = this.value.replace(/[^0-9]/g, '');
+          
+          // Keep only the first digit
+          if (this.value.length > 1) {
+            this.value = this.value.slice(0, 1);
+          }
+          
+          // Move to next input if a digit is entered
+          if (this.value.length === 1) {
+            // Remove active class from current input
+            this.classList.remove('active');
+            
+            // Move to next input if available
+            if (index < otpInputs.length - 1) {
+              otpInputs[index + 1].focus();
+              otpInputs[index + 1].classList.add('active');
+            }
+          }
+        });
+        
+        // Handle backspace
+        input.addEventListener('keydown', function(e) {
+          if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+            // Remove active class from current input
+            this.classList.remove('active');
+            
+            // Focus previous input
+            otpInputs[index - 1].focus();
+            otpInputs[index - 1].classList.add('active');
+          }
+        });
+        
+        // Handle focus
+        input.addEventListener('focus', function() {
+          // Remove active class from all inputs
+          otpInputs.forEach(inp => inp.classList.remove('active'));
+          
+          // Add active class to current input
+          this.classList.add('active');
+        });
+      });
+      
+      // Handle resend link
+      const resendLink = document.querySelector('.resend-link');
+      resendLink.addEventListener('click', function() {
+        alert('OTP resent successfully!');
+      });
+    </script>
+  </body>
+</html>

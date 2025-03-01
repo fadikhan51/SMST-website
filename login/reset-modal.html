@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap"
+    />
+    <title>Student Login and Password Reset</title>
+    <style>
+      :root {
+        --color-crimson: #ff3b54;
+        --font-be-vietnam-pro: 'Be Vietnam Pro', sans-serif;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: radial-gradient(circle, #fff5f5, #fff);
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+      }
+      
+      .button-container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .logo {
+        position: absolute;
+        top: 5vh;
+        width: 10%;
+        object-fit: contain;
+      }
+
+      .card {
+        background: white;
+        padding: 5%;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-bricolage-grotesque);
+      }
+
+      .required {
+        color: var(--color-crimson);
+      }
+
+      input {
+        padding: 0.8rem;
+        border: none;
+        border-bottom: 2px solid var(--color-pink);
+        font-size: 16px;
+        outline: none;
+        background: transparent;
+        transition: all 0.2s ease;
+        color: #0e0606;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input::placeholder {
+        opacity: 0.5;
+        color: gray;
+      }
+
+      input:focus {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+
+      input:not(:placeholder-shown)::placeholder {
+        opacity: 1;
+      }
+
+      .login-button {
+        width: 100%;
+        background: var(--color-crimson);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        transition: opacity 0.3s ease;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .login-button:hover {
+        opacity: 0.9;
+      }
+
+      .center-button {
+        background: var(--color-crimson);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .center-button:hover {
+        opacity: 0.9;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        width: 400px;
+        max-height: 90vh;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+
+      .dialog-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .subtitle {
+        text-align: left;
+        margin-bottom: 30px;
+        color: #666;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .subtitle a {
+        color: var(--color-crimson);
+        text-decoration: none;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .input-with-icon {
+        position: relative;
+      }
+
+      .input-with-icon input {
+        padding-left: 40px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .input-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-crimson);
+      }
+
+      .show-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      .forgot-password {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .forgot-password a {
+        color: var(--color-crimson);
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+      
+      .verified-name {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .verified-icon {
+        margin-right: 10px;
+        color: #4CAF50;
+      }
+
+      .clear-input {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        display: block;
+      }
+
+      .otp-options {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .otp-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .otp-option:hover, .otp-option.selected {
+        border-color: #0e0606;
+        box-shadow: 0 2px 8px rgba(255, 59, 84, 0.1);
+      }
+
+      .otp-option.selected {
+        background-color: rgba(255, 59, 84, 0.05);
+      }
+
+      .otp-option-left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .otp-option-title {
+        font-weight: 500;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .otp-option-value {
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+
+      .otp-option-right {
+        background-color: #f9f9f9;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .send-otp-button {
+        width: 100%;
+        background: #FF3B54;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        transition: opacity 0.3s ease;
+        font-family: var(--font-be-vietnam-pro);
+      }
+
+      .send-otp-button:hover {
+        opacity: 0.9;
+      }
+
+      @media screen and (max-width: 992px) {
+        .section {
+          width: 50%;
+        }
+        .modal-content {
+          width: 80%;
+          max-width: 400px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .logo {
+          width: 15%;
+        }
+        .modal-content {
+          width: 90%;
+          padding: 20px;
+        }
+        .button-container {
+          flex-direction: column;
+          width: 100%;
+        }
+        .center-button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <img src="./assets/company-logo.svg" alt="Company Logo" class="logo" />
+      <div class="button-container">
+        <button id="openDialog" class="center-button">Open Login Form</button>
+        <button id="openResetDialog" class="center-button">Reset Password</button>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <div class="close" id="closeDialog">
+          <img src="./assets/close-circle.svg" alt="Close" />
+        </div>
+        
+        <h2 class="dialog-title">Student Login</h2>
+        <p class="subtitle">New Student? <a href="#">Activate your account</a></p>
+        
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="enrolment">Enrolment No.</label>
+            <div class="input-with-icon">
+              <div class="input-icon">
+                <img src="./assets/Message_light.svg" alt="Email" />
+              </div>
+              <input type="text" id="enrolment" placeholder="SMST1124576" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-with-icon">
+              <div class="input-icon">
+                <img src="./assets/lock.svg" alt="Lock" />
+              </div>
+              <input type="password" id="password" placeholder="Password" />
+              <div class="show-password">
+                <img src="./assets/hide.svg" alt="Show/Hide Password" id="togglePassword" />
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="login-button">Login</button>
+          
+          <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Reset Password Modal -->
+    <div id="resetPasswordModal" class="modal">
+      <div class="modal-content">
+        <div class="close" id="closeResetDialog">
+          <img src="./assets/close-circle.svg" alt="Close" />
+        </div>
+        
+        <h2 class="dialog-title">Reset Password</h2>
+        <hr>
+        
+        <form id="resetPasswordForm">
+          <div class="form-group">
+            <label for="reset-enrolment">Enrolment No.</label>
+            <div class="input-with-icon">
+              <div class="input-icon">
+                <img src="./assets/Message_light.svg" alt="Email" />
+              </div>
+              <input type="text" id="reset-enrolment" placeholder="SMST1124576" value="SMST1124576" />
+              <div class="clear-input" id="clearEnrolment">
+                <img src="./assets/close-circle.svg" alt="Clear" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="verified-name">
+            <img src="./assets/tick-square.svg" alt="Verified" class="verified-icon" />
+            <span>Binod Rangeela</span>
+          </div>
+          
+          <button disabled type="button" class="login-button" id="resetPasswordBtn" style="opacity: 0.6;">Reset Password</button>
+          
+          <div class="otp-options">
+            <div class="otp-option" id="mobileOption">
+              <div class="otp-option-left">
+                <div class="otp-option-title">Send OTP on Mobile</div>
+                <div class="otp-option-value">98*** **210</div>
+              </div>
+              <div class="otp-option-right">
+                <img src="./assets/messages.svg" alt="Mobile" />
+              </div>
+            </div>
+            
+            <div class="otp-option" id="emailOption">
+              <div class="otp-option-left">
+                <div class="otp-option-title">Send OTP on Email</div>
+                <div class="otp-option-value">Bi**********@Gmail.Com</div>
+              </div>
+              <div class="otp-option-right">
+                <img src="./assets/sms.svg" alt="Email" />
+              </div>
+            </div>
+          </div>
+          
+          <button type="button" class="send-otp-button" id="sendOTPBtn">Send OTP</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Get modal elements
+      const modal = document.getElementById("loginModal");
+      const resetModal = document.getElementById("resetPasswordModal");
+      
+      // Get buttons
+      const loginBtn = document.getElementById("openDialog");
+      const resetBtn = document.getElementById("openResetDialog");
+      const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+      
+      // Get close buttons
+      const closeLoginBtn = document.getElementById("closeDialog");
+      const closeResetBtn = document.getElementById("closeResetDialog");
+      
+      // Open modals
+      loginBtn.onclick = function() {
+        modal.style.display = "flex";
+      }
+      
+      resetBtn.onclick = function() {
+        resetModal.style.display = "flex";
+      }
+      
+      // Close modals
+      closeLoginBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      closeResetBtn.onclick = function() {
+        resetModal.style.display = "none";
+      }
+      
+      // Handle forgot password link
+      forgotPasswordLink.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = "none";
+        resetModal.style.display = "flex";
+      }
+      
+      // Close modals when clicking outside
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+        if (event.target == resetModal) {
+          resetModal.style.display = "none";
+        }
+      }
+      
+      // Toggle password visibility
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+      
+      togglePassword.onclick = function() {
+        const type = passwordInput.type === "password" ? "text" : "password";
+        passwordInput.type = type;
+        togglePassword.src = type === "password" ? "./assets/hide.svg" : "./assets/show.svg";
+      }
+      
+      // Reset password form functionality
+      const clearEnrolmentBtn = document.getElementById("clearEnrolment");
+      const enrolmentInput = document.getElementById("reset-enrolment");
+      const mobileOption = document.getElementById("mobileOption");
+      const emailOption = document.getElementById("emailOption");
+      
+      // Clear enrollment input
+      clearEnrolmentBtn.onclick = function() {
+        enrolmentInput.value = "";
+        clearEnrolmentBtn.style.display = "none";
+      }
+      
+      // Show/hide clear button based on input
+      enrolmentInput.oninput = function() {
+        clearEnrolmentBtn.style.display = this.value.length > 0 ? "block" : "none";
+      }
+      
+      // OTP option selection
+      mobileOption.onclick = function() {
+        mobileOption.classList.add("selected");
+        emailOption.classList.remove("selected");
+      }
+      
+      emailOption.onclick = function() {
+        emailOption.classList.add("selected");
+        mobileOption.classList.remove("selected");
+      }
+      
+      // Prevent form submissions
+      document.getElementById("loginForm").onsubmit = function(e) {
+        e.preventDefault();
+      }
+      
+      document.getElementById("resetPasswordForm").onsubmit = function(e) {
+        e.preventDefault();
+      }
+      
+      // Send OTP button
+      document.getElementById("sendOTPBtn").onclick = function() {
+        alert("OTP sent! This is a demo.");
+      }
+    </script>
+  </body>
+</html>
