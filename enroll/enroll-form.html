@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../global.css" />
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;500;600&display=swap"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;600&display=swap"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;500;600&display=swap"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap"
-  />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage Grotesque:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap"
+    />
     <title>Responsive Form</title>
     <style>
       body {
@@ -38,7 +38,27 @@
       }
 
       .section {
-        display: flex; align-items: center; justify-content: center; width:30%;
+        display: flex;
+        align-items: center;
+        padding-top: calc(5vh + 80px);
+        justify-content: center;
+        align-self: center;
+        width: 30%;
+
+      }
+
+      @media screen and (max-height: 570px) {
+        .section {
+            padding-top: calc(5vh + 170px);
+        }
+        
+      }
+
+      @media screen and (max-height: 460px) {
+        .section {
+            padding-top: calc(5vh + 200px);
+        }
+        
       }
       .logo {
         position: absolute;
@@ -50,6 +70,9 @@
       .card {
         background: white;
         padding: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         border-radius: 1rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
@@ -60,6 +83,63 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+        position: relative;
+      }
+      
+      .input-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--color-pink);
+        transition: all 0.3s ease;
+      }
+      
+      .input-container:focus-within {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+      
+      .chips {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .country-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        border-bottom: 2px solid var(--color-pink);
+        transition: all 0.3s ease;
+      }
+      
+      .country-container:focus-within {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+
+      .chip {
+        font-family: var(--font-be-vietnam-pro);
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 16px;
+        font-weight: 500;
+        border: 2px solid var(--color-pink);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .chip.selected {
+        color: var(--color-crimson);
+        border: 2px solid var(--color-crimson);
+        font-weight: 500;
+      }
+      
+      .chip.unselected {
+        font-weight: 300;
       }
 
       .input-group {
@@ -80,14 +160,16 @@
       }
 
       input {
-        /* width: 100%; */
         padding: 0.8rem;
         border: none;
-        border-bottom: 2px solid var(--color-pink);
         font-size: 1rem;
         outline: none;
         background: transparent;
         transition: all 0.3s ease;
+        flex: 1;
+      }
+      
+      input.selected {
         color: var(--color-crimson);
       }
 
@@ -96,14 +178,49 @@
         color: gray;
       }
 
-      input:focus {
-        border-bottom: 2px solid var(--color-crimson);
+      .dropdown-input {
+        border-bottom: none;
+      }
+      
+      .dropdown-arrow {
+        transition: transform 0.3s ease;
+      }
+      
+      .dropdown-arrow.rotate {
+        transform: rotate(180deg);
       }
 
-      input:not(:placeholder-shown)::placeholder {
-        opacity: 1;
+      .dropdown-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
       }
-
+      
+      .dropdown-options.open {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      
+      .dropdown-option {
+        padding: 10px;
+        cursor: pointer;
+        font-family: var(--font-be-vietnam-pro);
+        transition: background 0.2  s;
+      }
+      
+      .dropdown-option:hover {
+        background: #f8f8f8;
+        color: var(--color-crimson);
+      }
+      
       .button {
         width: 25%;
         display: flex;
@@ -113,6 +230,7 @@
         padding: 1rem 2rem;
         border-radius: 2rem;
         cursor: pointer;
+        margin-left: auto;
         margin-top: 2rem;
         font-weight: bold;
         font-size: 18px;
@@ -133,30 +251,75 @@
       }
 
       .button img {
-        
         margin-left: 0.5rem;
       }
 
-      @media screen and (max-width:992px) {
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .custom-checkbox {
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--color-pink);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .custom-checkbox.checked {
+        background: var(--color-crimson);
+        border-color: var(--color-crimson);
+      }
+
+      .custom-checkbox::after {
+        content: '✓';
+        color: white;
+        display: none;
+      }
+
+      .custom-checkbox.checked::after {
+        display: block;
+      }
+
+      .phone-input-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 2px solid var(--color-pink);
+        transition: all 0.3s ease;
+      }
+      
+      .phone-input-container:focus-within {
+        border-bottom: 2px solid var(--color-crimson);
+      }
+
+      @media screen and (max-width: 992px) {
         .section {
           width: 50%;
         }
         .button {
-            font-size: 14px;
-            padding: 0.8rem 1.6rem;
+          font-size: 14px;
+          padding: 0.8rem 1.6rem;
         }
         label {
-            font-size: 14px;
+          font-size: 14px;
         }
       }
       @media (max-width: 768px) {
-
         .logo {
           width: 15%;
         }
         .button {
-            font-size: 12px;
-            padding: 0.6rem 1.2rem;
+          font-size: 12px;
+          padding: 0.6rem 1.2rem;
         }
       }
     </style>
@@ -166,13 +329,76 @@
       <img src="./assets/company-logo.svg" alt="Company Logo" class="logo" />
 
       <div class="card">
+        <!-- Mode of Course section -->
         <div class="mode">
-            <label>Mode of Course<span class="required">*</span></label>
+          <label>Mode of Course<span class="required">*</span></label>
+          <div class="chips">
+            <div class="chip selected" data-group="courseMode" data-value="online">Online</div>
+            <div class="chip unselected" data-group="courseMode" data-value="offline">Offline</div>
+          </div>
+          <input type="hidden" id="courseMode" value="online">
         </div>
-        <div class="input-group">
-          <label>What's Your Name? <span class="required">*</span></label>
-          <input type="text" placeholder="John Doe" oninput="toggleButton(this)" />
+        
+        <!-- Interest Course section -->
+        <div class="mode">
+          <label>Interest Course?<span class="required">*</span></label>
+          <div class="input-container">
+            <input
+              type="text"
+              id="courseInput"
+              placeholder="Beginner Music Production"
+              class="dropdown-input"
+              readonly
+            />
+            <img src="./assets/arrow-down.svg" alt="Arrow" class="dropdown-arrow" />
+          </div>
+          <div class="dropdown-options">
+            <div class="dropdown-option" data-value="beginner">Beginner Music Production</div>
+            <div class="dropdown-option" data-value="intermediate">Intermediate Music Production</div>
+            <div class="dropdown-option" data-value="advanced">Advanced Music Production</div>
+            <div class="dropdown-option" data-value="sound-design">Sound Design</div>
+            <div class="dropdown-option" data-value="mixing">Mixing & Mastering</div>
+          </div>
         </div>
+        
+        <!-- Country section -->
+        <div class="mode">
+          <label>Country<span class="required">*</span></label>
+          <div class="chips">
+            <div class="chip selected" data-group="country" data-value="india">India</div>
+            <div class="chip unselected" data-group="country" data-value="other">Other</div>
+          </div>
+          <div class="country-container">
+            <input
+              type="text"
+              id="countryInput"
+              placeholder="United States of America"
+              disabled
+            />
+          </div>
+          <input type="hidden" id="country" value="india">
+        </div>
+        
+        <!-- Phone number section -->
+        <div class="mode" style="justify-content: space-between; flex-direction: row; align-items: center;">
+          <div>
+            <label>Phone Number<span class="required">*</span></label>
+          </div>
+          <div class="checkbox-group">
+            <div class="custom-checkbox" id="whatsappCheckbox"></div>
+            <span style="font-family: var(--font-be-vietnam-pro); font-size: 14px;">WhatsApp me</span>
+          </div>
+        </div>
+        <div class="phone-input-container">
+          <span style="font-family: var(--font-be-vietnam-pro); font-size: 14px; padding-left: 8px;">+91</span>
+          <input
+            type="text"
+            id="phoneInput"
+            placeholder="XXXXX XXXXX"
+            maxlength="11"
+          />
+        </div>
+        
         <div class="button" id="nextButton">
           Next <img src="./assets/arrow-right.svg" alt="Arrow" />
         </div>
@@ -180,14 +406,119 @@
     </section>
 
     <script>
-      function toggleButton(input) {
-        const button = document.getElementById('nextButton');
-        if (input.value.trim() !== '') {
-          button.classList.add('active');
+      // Check form validity to enable/disable next button
+      function checkFormValidity() {
+        const nextButton = document.getElementById("nextButton");
+        
+        // Check course mode selection
+        const courseModeSelected = document.querySelector('.chip[data-group="courseMode"].selected') !== null;
+        
+        // Check course dropdown selection
+        const courseInput = document.getElementById('courseInput');
+        const courseSelected = courseInput.value.trim() !== '';
+        
+        // Check country selection
+        const countryChip = document.querySelector('.chip[data-group="country"].selected');
+        const countryInput = document.getElementById('countryInput');
+        let countryValid = false;
+        
+        if (countryChip) {
+          if (countryChip.getAttribute('data-value') === 'india') {
+            countryValid = true;
+          } else if (countryChip.getAttribute('data-value') === 'other') {
+            countryValid = countryInput.value.trim() !== '';
+          }
+        }
+        
+        // Check phone number
+        const phoneInput = document.getElementById('phoneInput');
+        const phoneValid = phoneInput.value.replace(/\s/g, '').length >= 10;
+        
+        // Enable button if all conditions are met
+        if (courseModeSelected && courseSelected && countryValid && phoneValid) {
+          nextButton.classList.add('active');
         } else {
-          button.classList.remove('active');
+          nextButton.classList.remove('active');
         }
       }
+
+      // Handle chip selection
+      document.querySelectorAll('.chip[data-group]').forEach(chip => {
+        chip.addEventListener('click', function() {
+          const group = this.getAttribute('data-group');
+          const value = this.getAttribute('data-value');
+          
+          // Update chip states
+          document.querySelectorAll(`.chip[data-group="${group}"]`).forEach(c => {
+            c.classList.remove('selected');
+            c.classList.add('unselected');
+          });
+          this.classList.add('selected');
+          this.classList.remove('unselected');
+          
+          // Update hidden input
+          document.getElementById(group).value = value;
+          
+          // Handle country input
+          if (group === 'country') {
+            const countryInput = document.getElementById('countryInput');
+            countryInput.disabled = value !== 'other';
+            if (value !== 'other') {
+              countryInput.value = '';
+            }
+          }
+          
+          checkFormValidity();
+        });
+      });
+
+      // Handle dropdown
+      const courseInput = document.getElementById('courseInput');
+      const dropdownOptions = document.querySelector('.dropdown-options');
+      const dropdownArrow = document.querySelector('.dropdown-arrow');
+
+      courseInput.addEventListener('click', () => {
+        dropdownOptions.classList.toggle('open');
+        dropdownArrow.classList.toggle('rotate');
+      });
+
+      document.querySelectorAll('.dropdown-option').forEach(option => {
+        option.addEventListener('click', function() {
+          courseInput.value = this.textContent;
+          courseInput.classList.add('selected');
+          dropdownOptions.classList.remove('open');
+          dropdownArrow.classList.remove('rotate');
+          checkFormValidity();
+        });
+      });
+
+      // Handle country input
+      const countryInput = document.getElementById('countryInput');
+      countryInput.addEventListener('input', checkFormValidity);
+
+      // Handle phone input
+      const phoneInput = document.getElementById('phoneInput');
+      phoneInput.addEventListener('input', function(e) {
+        this.value = this.value.replace(/[^0-9\s]/g, '');
+        checkFormValidity();
+      });
+
+      // Handle WhatsApp checkbox
+      const whatsappCheckbox = document.getElementById('whatsappCheckbox');
+      whatsappCheckbox.addEventListener('click', function() {
+        this.classList.toggle('checked');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mode')) {
+          dropdownOptions.classList.remove('open');
+          dropdownArrow.classList.remove('rotate');
+        }
+      });
+
+      // Initial form validation check
+      window.addEventListener('load', checkFormValidity);
     </script>
   </body>
 </html>
