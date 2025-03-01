@@ -144,7 +144,6 @@
         }
       }
       @media (max-width: 768px) {
-
         .logo {
           width: 15%;
         }
@@ -159,26 +158,6 @@
     <section class="section">
       <img src="./assets/company-logo.svg" alt="Company Logo" class="logo" />
 
-      <div class="card">
-        <div class="input-group">
-          <label>What's Your Name? <span class="required">*</span></label>
-          <input type="text" placeholder="John Doe" oninput="toggleButton(this)" />
-        </div>
-        <div class="button" id="nextButton">
-          Next <img src="./assets/arrow-right.svg" alt="Arrow" />
-        </div>
-      </div>
-    </section>
-
-    <script>
-      function toggleButton(input) {
-        const button = document.getElementById('nextButton');
-        if (input.value.trim() !== '') {
-          button.classList.add('active');
-        } else {
-          button.classList.remove('active');
-        }
-      }
-    </script>
+      
   </body>
 </html>
