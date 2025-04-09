@@ -1,201 +1,6 @@
 body {
   transition: all 0.5 ease;
 }
-/* Header styles */
-.inline-hamburger {
-color: #0e0606;
-font-size: 25px;
-}
-
-.inline-nav-link {
-text-decoration: none;
-color: inherit;
-text-align: center;
-}
-
-/* Desktop-21 section */
-.inline-desktop-21 {
-margin-left: 5%;
-margin-right: 5%;
-background-image: url('./public/blur.svg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-}
-
-.inline-play-video-left {
-flex: 1;
-height: 100%;
-display: flex;
-align-items: center;
-padding-left: 5%;
-}
-
-.inline-sec1-logo {
-width: 30%;
-}
-
-.inline-play-video-right {
-flex: 2;
-position: relative;
-}
-
-.inline-video-image {
-width: 100%;
-border-radius: 12px;
-}
-
-.inline-play-button {
-cursor: pointer;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-/* SMST section */
-.inline-smst-section {
-width: 100%;
-align-items: center;
-justify-content: center;
-height: 500px;
-padding: 40px 0;
-background-color: #ffffff;
-background-image: url('./public/group-1.svg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-}
-
-.inline-smst-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-position: relative;
-}
-
-.inline-smst-heading {
-position: absolute;
-top: calc(50% + 20%);
-transform: translateY(-50%);
-}
-
-/* Frame-parent4 section (Join Now) */
-.inline-join-now-text {
-color: var(--color-white);
-}
-
-.inline-enroll-container {
-align-self: center;
-}
-
-.inline-enroll-btn {
-margin-top: 5%;
-}
-
-.inline-small-candles {
-position: inherit;
-}
-
-/* Hero section (Collective Resources) */
-.inline-hero-heading-container {
-align-self: center;
-}
-
-.inline-logo-slider-container-1 {
-overflow-x: hidden;
-}
-
-.inline-logo-slider-container-2 {
-min-width: 100%;
-overflow-x: hidden;
-}
-
-.inline-logo-slider-flex {
-display: flex;
-justify-content: space-between;
-}
-
-.inline-logo-slider-flex-padded {
-display: flex;
-justify-content: space-between;
-padding-left: 5%;
-}
-
-.inline-logo-image {
-object-fit: contain;
-width: 10%;
-height: auto;
-}
-
-/* Curriculum section */
-.inline-curriculum-header {
-margin-bottom: 5%;
-flex-wrap: wrap;
-}
-
-.inline-accordian-container {
-width: 100%;
-}
-
-.inline-accordian-data {
-display: flex;
-gap: 3%;
-flex-wrap: wrap;
-column-gap: 3%;
-}
-
-.inline-accordian-item {
-margin-top: 2%;
-margin-bottom: 2%;
-}
-
-.inline-accordian-image-container {
-width: 100%;
-margin-top: 2%;
-margin-bottom: 2%;
-}
-
-/* Dice section */
-.inline-dice-section {
-position: relative;
-color: black;
-gap: 6%;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-min-width: 100%;
-height: 500px;
-overflow: hidden;
-}
-
-.inline-dice-top {
-position: absolute;
-top: -8%;
-right: 9%;
-}
-
-.inline-dice-bottom {
-position: absolute;
-bottom: 15%;
-left: 4%;
-}
-
-.inline-dice-text {
-margin-bottom: 10%;
-}
-
-.inline-create-text {
-width: 100%;
-text-align: center;
-}
-
-.inline-send-text {
-text-align: center;
-}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -2192,7 +1997,6 @@ justify-content: flex-end;
 }
 .create-your-own {
 margin: 0;
-width: 44.375rem;
 position: relative;
 font-size: inherit;
 line-height: 100%;
@@ -3255,3 +3059,198 @@ font-family: var(--font-bricolage-grotesque);
   box-sizing: border-box;
 }
 }
+/* Header styles */
+.inline-hamburger {
+  color: #0e0606;
+  font-size: 25px;
+  }
+  
+  .inline-nav-link {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  }
+  
+  /* Desktop-21 section */
+  .inline-desktop-21 {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-image: url('./public/blur.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  }
+  
+  .inline-play-video-left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  }
+  
+  .inline-sec1-logo {
+  width: 30%;
+  }
+  
+  .inline-play-video-right {
+  flex: 2;
+  position: relative;
+  }
+  
+  .inline-video-image {
+  width: 100%;
+  border-radius: 12px;
+  }
+  
+  .inline-play-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  /* SMST section */
+  .inline-smst-section {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 40px 0;
+  background-color: #ffffff;
+  background-image: url('./public/group-1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  }
+  
+  .inline-smst-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  }
+  
+  .inline-smst-heading {
+  position: absolute;
+  top: calc(50% + 20%);
+  transform: translateY(-50%);
+  }
+  
+  /* Frame-parent4 section (Join Now) */
+  .inline-join-now-text {
+  color: var(--color-white);
+  }
+  
+  .inline-enroll-container {
+  align-self: center;
+  }
+  
+  .inline-enroll-btn {
+  margin-top: 5%;
+  }
+  
+  .inline-small-candles {
+  position: inherit;
+  }
+  
+  /* Hero section (Collective Resources) */
+  .inline-hero-heading-container {
+  align-self: center;
+  }
+  
+  .inline-logo-slider-container-1 {
+  overflow-x: hidden;
+  }
+  
+  .inline-logo-slider-container-2 {
+  min-width: 100%;
+  overflow-x: hidden;
+  }
+  
+  .inline-logo-slider-flex {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .inline-logo-slider-flex-padded {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  }
+  
+  .inline-logo-image {
+  object-fit: contain;
+  width: 10%;
+  height: auto;
+  }
+  
+  /* Curriculum section */
+  .inline-curriculum-header {
+  margin-bottom: 5%;
+  flex-wrap: wrap;
+  }
+  
+  .inline-accordian-container {
+  width: 100%;
+  }
+  
+  .inline-accordian-data {
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
+  column-gap: 3%;
+  }
+  
+  .inline-accordian-item {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  }
+  
+  .inline-accordian-image-container {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  }
+  
+  /* Dice section */
+  .inline-dice-section {
+  position: relative;
+  color: black;
+  gap: 6%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100%;
+  height: 500px;
+  overflow: hidden;
+  }
+  
+  .inline-dice-top {
+  position: absolute;
+  top: -8%;
+  right: 9%;
+  }
+  
+  .inline-dice-bottom {
+  position: absolute;
+  bottom: 15%;
+  left: 4%;
+  }
+  
+  .inline-dice-text {
+  margin-bottom: 10%;
+  }
+  
+  .inline-create-text {
+  width: 100%;
+  text-align: center;
+  }
+  
+  .inline-send-text {
+  text-align: center;
+  }
