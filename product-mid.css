@@ -1,3 +1,48 @@
+/* Inline Styling  */
+/* Header styles */
+.inline-hamburger {
+  color: #0e0606;
+  font-size: 25px;
+}
+
+.inline-nav-link {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+/* Video section */
+.inline-video-section {
+  width: 100%;
+  position: relative;
+}
+
+.inline-video-image {
+  width: 100%;
+  height: 100%;
+}
+
+.inline-video-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/* Product details section */
+.inline-product-details {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.inline-background-image {
+  position: absolute;
+  top: -70%;
+  right: -30%;
+}
+/* Normal Styling */
 .download-100s-of {
     margin: 0;
   }
@@ -280,7 +325,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--gap-29xl);
-    max-width: 100%;
+    width: 100%;
+    margin: 5%;
   }
   .desktop-23 {
     width: 100%;
@@ -291,7 +337,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    padding: 100px var(--padding-xl) var(--padding-117xl);
     box-sizing: border-box;
     line-height: normal;
     letter-spacing: normal;

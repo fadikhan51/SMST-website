@@ -1,0 +1,143 @@
+/* Global Heading Class */
+.globalHeading {
+    font-family: var(--font-bricolage-grotesque);
+    color: #0e0606;
+    font-size: 68px;
+    font-weight: 700;
+  }
+  .globalMediumHeading {
+    font-family: var(--font-bricolage-grotesque);
+    color: #0e0606;
+    font-size: 44px;
+    font-weight: 700;
+  }
+  
+  .globalParagraphText18{
+    font-family: var(--font-be-vietnam-pro);
+    color: var(--paragraph);
+    font-size: 18px;
+  }
+  .paragraph-text {
+    color: var(--paragraph);
+    font-size: 16px;
+    font-family: var(--font-be-vietnam-pro);
+    text-align: left;
+  }
+  .enrollbtn {
+    background-color: var(--color-gold-100);
+    padding: var(--padding-mid) var(--padding-13xl);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--br-11xl);
+    font-weight: 500;
+    color: #0e0606;
+    gap: var(--gap-xs);
+    width: fit-content;
+    font-size: 18px;
+    font-family: var(--font-be-vietnam-pro);
+  }
+  .pink {
+    background-color: var(--color-crimson);
+    color: var(--color-white);
+  }
+  /* Footer styles */
+.inline-footer-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.inline-footer-bottom {
+  padding-top: 5%;
+  width: 95%;
+  padding-left: 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  gap: 2%;
+}
+
+.inline-footer-delhi {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+}
+
+.inline-footer-logo {
+  width: 20%;
+  height: auto;
+}
+  @media screen and (max-width: 1200px) {
+    .globalHeading {
+        font-size: 60px;
+    }
+    .globalMediumHeading {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .paragraph-text {
+      font-size: 14px;
+    }
+}
+  
+  @media screen and (max-width: 768px) {
+    .globalHeading {
+        font-size: 44px;
+    }
+    .globalMediumHeading {
+      font-size: 32px;
+    }
+    .globalParagraphText18{
+      font-size: 16px;
+    }
+    .paragraph-text {
+        font-size: 12px;
+      }
+      .enrollbtn {
+        font-size: 16px;
+        }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .globalHeading {
+        font-size: 32px;
+    }
+    .globalMediumHeading {
+      font-size: 24px;
+    }
+    .artistic-development {
+      line-height: 45px;
+    }
+    .paragraph-text {
+        font-size: 10px;
+      }
+      
+  }
+
+  @media screen and (max-width: 494px) {
+    .enrollbtn {
+        font-size: 14px;
+        padding: var(--padding-xs) var(--padding-xl);
+      }
+      .globalHeading {
+        font-size: 26px;
+    }
+    .globalMediumHeading {
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (max-width: 370px) {
+    .globalHeading {
+        font-size: 24px;
+    }
+    .globalMediumHeading {
+      font-size: 20px;
+    }
+  }
