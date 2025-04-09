@@ -16,6 +16,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans Hebrew:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre Franklin:wght@500&display=swap" />
     <script src="./javascript/artistic.js" defer></script>
+    <style>
+      .image-container {
+  position: relative;
+  width: fit-content;
+}
+
+.image-container img {
+  display: block;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-image {
+  opacity: 1;
+}
+    </style>
   </head>
   <body>
     <div class="course-page">
@@ -154,19 +176,48 @@
       <section class="skills">
         <div class="midHeading globalMediumHeading">Gain Skills to Work in the Following Areas</div>
         <div class="first-area">
-          <img src="./public/home/area1.svg" alt="area1" loading="lazy" class="area" />
-          <img src="./public/home/area2.svg" alt="area1" loading="lazy" class="area" />
-          <img src="./public/home/area3.svg" alt="area1" loading="lazy" class="area" />
-        </div>
+          <img 
+              src="./public/home/area1.svg" 
+              alt="area1" 
+              loading="lazy" 
+              class="area" 
+              onmouseover="this.src='./public/home/active-area1.png'" 
+              onmouseout="this.src='./public/home/area1.svg'" 
+          />
+          <img 
+              src="./public/home/area2.png" 
+              alt="area2" 
+              loading="lazy" 
+              class="area"
+              onmouseover="this.src='./public/home/active-area2.svg'" 
+              onmouseout="this.src='./public/home/area2.png'" 
+          />
+          <img 
+              src="./public/home/area3.svg" 
+              alt="area3" 
+              loading="lazy" 
+              class="area"
+              onmouseover="this.src='./public/home/active-area3.png'" 
+              onmouseout="this.src='./public/home/area3.svg'" 
+          />
+      </div>
         <div class="second-area">
-          <img src="./public/home/area4.svg" alt="area1" loading="lazy" class="area" />
-          <img src="./public/home/area5.svg" alt="area1" loading="lazy" class="area" />
-          <img src="./public/home/area6.svg" alt="area1" loading="lazy" class="area" />
+          <img src="./public/home/area4.svg" alt="area1" loading="lazy" class="area" 
+          onmouseover="this.src='./public/home/active-area4.png'" 
+          onmouseout="this.src='./public/home/area4.svg'" />
+          <img src="./public/home/area5.svg" alt="area1" loading="lazy" class="area"
+          onmouseover="this.src='./public/home/active-area5.png'" 
+          onmouseout="this.src='./public/home/area5.svg'"
+           />
+          <img src="./public/home/area6.svg" alt="area1" loading="lazy" class="area" 
+          onmouseover="this.src='./public/home/active-area6.png'" 
+          onmouseout="this.src='./public/home/area6.svg'"
+          />
         </div>
         <div class="carousel-container2">
           <div class="carousel2">
             <div class="slide2 active"><img src="./public/home/area1.svg" class="resize-img" alt="Image 1" /></div>
-            <div class="slide2"><img src="./public/home/area2.svg" class="resize-img" alt="Image 2" /></div>
+            <div class="slide2"><img src="./public/home/area2.png" class="resize-img" alt="Image 2" /></div>
             <div class="slide2"><img src="./public/home/area3.svg" class="resize-img" alt="Image 3" /></div>
             <div class="slide2"><img src="./public/home/area4.svg" class="resize-img" alt="Image 4" /></div>
             <div class="slide2"><img src="./public/home/area5.svg" class="resize-img" alt="Image 4" /></div>

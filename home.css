@@ -7,7 +7,7 @@
 
 .carousel-container2 {
   display: none;
-  width: 40%;
+  width: 70%;
   margin: 0 auto;
   position: relative;
 }
@@ -21,7 +21,7 @@
 
 .carousel2 {
   width: 100%;
-  height: 300px;
+  height: 250px;
   position: relative;
   overflow: hidden;
 }
@@ -72,15 +72,16 @@
 
 .carousel-nav2 {
   position: absolute;
-  top: 50%;
-  width: 130%;
-  left: -15%;
+  /* top: 50%; */
+  /* width: 130%;
+  left: -15%; */
   transform: translateY(-50%);
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .nav-button {
+  font-size: 14px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 1rem;
@@ -96,6 +97,7 @@
 }
 
 .nav-button2 {
+  font-size: 14px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 1rem;
@@ -410,8 +412,11 @@
 
 .area {
   width: 32%;
+  cursor: pointer;
   object-fit: contain;
+  transition: all 0.3s ease; 
 }
+
 
 .hero {
   background-color: var(--color-white);
@@ -1001,15 +1006,21 @@
     display: inherit;
   }
   .carousel2 {
-    height: 150px;
+    height: 130px;
   }
   .carousel-nav {
     width: 140%;
     left: -20%;
   }
   .carousel-nav2 {
-    width: 180%;
-    left: -40%;
+    left: -10%;
+    bottom: -50%;
+    gap: 10px
+  }
+  .nav-button2 {
+    font-size: 12px;
+    width: 40px;
+    height: 40px
   }
   .first-area {
     display: none;
@@ -1247,6 +1258,25 @@
 }
 
 @media screen and (max-width: 533px) {
+  .carousel-nav {
+    width: 160%;
+    left: -29%;
+  }
+  .carousel-nav2 {
+    left: -15%;
+    bottom: -45%;
+    gap: 8px
+  }
+  .nav-button {
+    font-size: 12px;
+    width: 35px;
+    height: 35px
+  }
+  .nav-button2 {
+    font-size: 10px;
+    width: 35px;
+    height: 35px
+  }
   .title {
     font-size: 25px;
   }
@@ -1277,6 +1307,25 @@
   }
 }
 @media screen and (max-width: 350px) {
+  .carousel-nav {
+    width: 170%;
+    left: -35%;
+  }
+  .carousel-nav2 {
+    left:-18%;
+    bottom: -30%;
+    gap: 8px
+  }
+  .nav-button {
+    font-size: 10px;
+    width: 25px;
+    height: 25px
+  }
+  .nav-button2 {
+    font-size: 8px;
+    width: 10px;
+    height: 10px
+  }
   .mentors {
     width: 90%;
   }
