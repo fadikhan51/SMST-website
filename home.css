@@ -1315,16 +1315,14 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .carousel2 {
-    height: 80px;
-  }
+  
   .carousel-nav {
     width: 170%;
     left: -35%;
   }
   .carousel-nav2 {
     right: 4%;
-    bottom: -70%;
+    bottom: -25%;
     gap: 8px
   }
   .nav-button {
