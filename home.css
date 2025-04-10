@@ -7,7 +7,7 @@
 
 .carousel-container2 {
   display: none;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
 }
@@ -1006,15 +1006,14 @@
     display: inherit;
   }
   .carousel2 {
-    height: 130px;
   }
   .carousel-nav {
     width: 140%;
     left: -20%;
   }
   .carousel-nav2 {
-    left: -10%;
-    bottom: -50%;
+    right: 0%;
+    bottom: -25%;
     gap: 10px
   }
   .nav-button2 {
@@ -1063,6 +1062,12 @@
   }
   .mob-quote-section {
     display: inherit !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .carousel-nav2 {
+    bottom: -17%;
   }
 }
 @media screen and (max-width: 497px) {
@@ -1258,13 +1263,16 @@
 }
 
 @media screen and (max-width: 533px) {
+  .carousel2 {
+    height: 150px
+  }
   .carousel-nav {
     width: 160%;
     left: -29%;
   }
   .carousel-nav2 {
-    left: -15%;
-    bottom: -45%;
+    right: 2%;
+    bottom: -37%;
     gap: 8px
   }
   .nav-button {
@@ -1307,13 +1315,16 @@
   }
 }
 @media screen and (max-width: 350px) {
+  .carousel2 {
+    height: 80px;
+  }
   .carousel-nav {
     width: 170%;
     left: -35%;
   }
   .carousel-nav2 {
-    left:-18%;
-    bottom: -30%;
+    right: 4%;
+    bottom: -70%;
     gap: 8px
   }
   .nav-button {
